@@ -25,3 +25,13 @@ Maria Roldan : Soy de Buenos Aires, CABA, tengo 27 años años y... (coming soon
 Lucas Leonardis: Soy de Buenos Aires, zona norte, tengo 18 años. Trabajo en el rubro mudanzas.
 Lucas Escobosa: Soy de córdoba. Tengo 28 años, soy ingeniero electrónico. Me gusta la tecnología y soy F A N Á T I C O de la Fórmula 1.
 Rodolfo Roust: 
+
+
+Páginas web como inspiración:
+
+- https://parrillasarg.com.ar/
+- https://www.fogonegros.com.ar/
+- https://www.laplanchetta.com/tienda/
+- https://www.bbqgrill.com.ar/
+- https://www.whofwhof.com.ar/
+- https://www.turboblender.com/
