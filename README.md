@@ -22,7 +22,7 @@ Público al que apunta: Asadores que busquen la mejor calidad en sus preparacion
 Una breve descripción de los integrantes del equipo:
 
 - Miguel Molnar: Soy de Buenos Aires, zona Oeste, tengo 27 años. Soy productor musical, runner maratonista, aficionado a la cocina y mi pasatiempo favorito es la lectura.
-- Maria Roldan : Soy de Buenos Aires, CABA, tengo 27 años años y... (coming soon)
+- Maria Roldan : Soy de Buenos Aires, CABA, tengo 26 años. Me gusta la actividad fisica, y disfruto mucho de la buena musica. 
 - Lucas Leonardis: Soy de Buenos Aires, zona norte, tengo 18 años. Trabajo en el rubro mudanzas.
 - Lucas Escobosa: Soy de córdoba. Tengo 28 años, soy ingeniero electrónico. Me gusta la tecnología y soy fanático de la Fórmula 1.
 - Rodolfo Roust: 
