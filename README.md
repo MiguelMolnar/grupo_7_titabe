@@ -35,4 +35,4 @@ Páginas web que serán la fuente de inspiración de nuestro proyecto:
 3) https://www.laplanchetta.com/tienda/ : 
 4) https://www.bbqgrill.com.ar/ : 
 5) https://www.whofwhof.com.ar/ : 
-5) https://www.turboblender.com/ : 
+5) https://www.fuegosjl.com/ : 
