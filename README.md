@@ -2,9 +2,9 @@
 
 Diseño Web de Titabé
 
- ● Nombre de la marca: TITABÉ
- ● Ubicación: Córdoba, Argentina.
- ● Lista de productos:
+ Nombre de la marca: TITABÉ
+ Ubicación: Córdoba, Argentina.
+ Lista de productos:
 
 - Parrillas modulares.
 - Fogoneros.
@@ -14,13 +14,13 @@ Diseño Web de Titabé
 - Tablas.
 - Elementos para el asador.
 
- ● Servicio:
+ Servicio:
 - Elaboración de parrillas personalizadas a medida.
 - Envíos a todo el pais.
 
- ● Público al que apunta: Asadores que busquen la mejor calidad en sus preparaciones.
+ Público al que apunta: Asadores que busquen la mejor calidad en sus preparaciones.
 
- ● Una breve descripción de los integrantes del equipo:
+ Una breve descripción de los integrantes del equipo:
 
 - Miguel Molnar: Soy de Buenos Aires, zona Oeste, tengo 27 años. Soy productor musical, runner maratonista, aficionado a la cocina y mi pasatiempo favorito es la lectura.
 - Maria Roldan : Soy de Buenos Aires, CABA, tengo 26 años. Me gusta la actividad fisica, y disfruto mucho de la buena musica. 
@@ -29,7 +29,7 @@ Diseño Web de Titabé
 - Rodolfo Roust: 
 
 
-● Páginas web que serán la fuente de inspiración de nuestro proyecto:
+Páginas web que serán la fuente de inspiración de nuestro proyecto:
 
 1) https://parrillasarg.com.ar/ : Por la simpleza de su diseño.
 2) https://www.fogonegros.com.ar/ : Por la forma en la que están distribuidas las diferentes partes de la página.
