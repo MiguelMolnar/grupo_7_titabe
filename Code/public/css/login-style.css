@@ -1,0 +1,62 @@
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario{
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    box-sizing: border-box;
+    border: solid black 1px;
+    margin: 100px 400px;
+    padding: 30px;
+    background: #fff;
+}
+
+.titlogin{
+    text-align: center;
+    font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa
+}
+
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999
+}
+
+.button{
+    border: none;
+    width: 40%;
+    margin-left: 145px;
+    color: white;
+    font-size: 20px;
+    background: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.link{
+
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
