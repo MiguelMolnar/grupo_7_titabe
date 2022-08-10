@@ -1,0 +1,69 @@
+/*Francois One and Open Sans font import*/
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+
+footer {
+    background-color: #000;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer h3 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+.footer-about-us {
+    width: 50%;
+    color: rgb(199, 199, 199);
+    padding: 10px 40PX;
+    text-align: center;
+}
+
+.footer-about-us p {
+    font-size: 12px;
+}
+
+.footer-information {
+    width: 20%;
+    color: rgb(199, 199, 199);
+    padding: 10px 20px;
+}
+
+.footer-information ul{
+    width: 50%;
+    margin: auto;
+    font-size: 12px;
+    align-items: center;
+}
+
+.footer-fire {
+    width: 30%;
+}
+
+.footer-fire img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer-rights {
+    width: 100%;
+    background-color:black;
+    height: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: orange;
+    padding: 2px;
+}
