@@ -14,20 +14,45 @@ body {
 }
 
 /*Header*/
-/*Social networks*/
+/*Social networks and mobile login*/
 .header-social {
     background-color: black;
     width: 100%;
     height: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-social .social {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
 
-.header-social i {
+.header-social .social i {
     color: white;
     margin: 0 5px;
+}
+
+.header-social .login {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-social .login i{
+    color: white;
+    padding: 0 5px;
+}
+
+.header-social .login .fa-user {
+    border-right: solid 2px white;
 }
 
 /*Top navbar*/
@@ -42,7 +67,7 @@ body {
 }
 
 .header-top-navbar-logo {
-    width: 30%;
+    width: 40%;
 }
 
 .header-top-navbar-logo img {
@@ -52,8 +77,9 @@ body {
 }
 
 .header-top-navbar-search-bar {
-    width: 40%;
+    width: 60%;
     position: relative;
+    padding: 0 15px
 }
 
 .header-top-navbar-search-bar input {
@@ -69,9 +95,13 @@ body {
     width: 35px;
     padding: 4px;
     position: absolute;
-    right: 0;
+    right: 15px;
 }
 
+.header-top-navbar-login-cart {
+    display: none;
+}
+/*
 .header-top-navbar-login-cart {
     text-align: center;
     width: 30%;
@@ -83,8 +113,12 @@ body {
     color: white;
     margin: 5px;
 }
-
+*/
 /*Bottom navbar*/
+.header-bottom-navbar {
+    display: none;
+}
+/*
 .header-bottom-navbar {
     background-color: black;
     width: 100%;
@@ -128,15 +162,36 @@ body {
     text-align: center;
     color: white;
 }
-
+*/
 /*Promotions banner*/
 .header-banner {
     width: 100%;
-    height: 200px;
+    height: 150px;
+    background-color: #1d365c;
+    padding: 15px 0;
 }
 
 .header-banner img{
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 120px;
+    object-fit: contain;
+}
+
+.header-categories {
+    width: 100%;
+    height: 60px;
+    padding: 5px 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-categories a {
+    height: 100%;
+} 
+
+.header-categories img {
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 50%;
 }
