@@ -20,19 +20,7 @@ main {
 .article-navigation {
     display: none;
 }
-/*
-.article-navigation {
-    width: 20%;
-    height: 100%;
-    padding: 30px;
-    color: white;
-}
 
-.article-navigation h3 {
-    font-family: 'Francois One', sans-serif;
-    font-size: 20px;
-}
-*/
 .article-offers{
     width: 100%;
     display: flex;
@@ -85,4 +73,31 @@ main {
     text-align: right;
 }
 
+@media (min-width: 461px) {
+    .article-offers article{
+        width: 40%;
+    }
+}
 
+@media (min-width: 769px) {
+
+    .article-navigation {
+        display: block;
+        width: 20%;
+        height: 100%;
+        padding: 30px;
+        color: white;
+    }
+
+    .article-navigation h3 {
+        font-family: 'Francois One', sans-serif;
+        font-size: 20px;
+    }
+
+    .article-offers{
+        width: 80%;
+    }
+    .article-offers article{
+        width: 30%;
+    }
+}

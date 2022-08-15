@@ -21,24 +21,13 @@ footer {
 footer h3 {
     font-family: 'Francois One', sans-serif;
     font-size: 20px;
-    margin: 20px 0;
+    margin: 15px 0;
     text-align: center;
 }
 .footer-about-us {
     display: none;
 }
-/*
-.footer-about-us {
-    width: 50%;
-    color: rgb(199, 199, 199);
-    padding: 10px 40PX;
-    text-align: center;
-}
 
-.footer-about-us p {
-    font-size: 12px;
-}
-*/
 .footer-information {
     width: 70%;
     color: rgb(199, 199, 199);
@@ -69,4 +58,27 @@ footer h3 {
     font-size: 10px;
     color: orange;
     padding: 2px;
+}
+
+@media (min-width: 769px) {
+    .footer-about-us {
+        display: block;
+        width: 50%;
+        color: rgb(199, 199, 199);
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    .footer-about-us p {
+        font-size: 12px;
+    }
+
+    .footer-information {
+        width: 25%;
+        padding: 10px 0 10px 20px;
+    }
+
+    .footer-fire {
+        width: 25%;
+    }
 }
