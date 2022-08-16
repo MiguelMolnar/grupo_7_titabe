@@ -1,0 +1,57 @@
+/*Francois One and Open Sans font import*/
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Open+Sans:ital,wght@0,400;1,300&family=Yanone+Kaffeesatz&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.current-product{
+    width: 760px;
+    margin: auto;
+    display: flex;
+    padding: 40px 0;
+}
+
+.current-product .product-pictures{
+    width: 50%;
+    padding: 20px;
+}
+
+.current-product .product-pictures img{
+    width: 100%;
+}
+
+.current-product .product-details{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current-product .product-details h2{
+    width: 100%;
+    font-family: 'Francois One', sans-serif;
+    font-size: 50px;
+}
+
+.current-product .product-details .product-description {
+    width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+}
+
+.current-product .product-details .product-price {
+    width: 50%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 50px;
+    color: red;
+}
+
+.current-product .product-details a {
+    width: 50%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+}
