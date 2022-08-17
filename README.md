@@ -37,3 +37,5 @@ Páginas web que serán la fuente de inspiración de nuestro proyecto:
 4) https://www.bbqgrill.com.ar/ : Por el diseño atractivo de la página. Los colores, el cursor, la eficacia al resaltar las redes sociales.
 5) https://www.whofwhof.com.ar/ : Por su header, simple y completo.
 6) https://www.fuegosjl.com/ : Porque nuestro cliente nos pidió que tambien utilicemos esta página web como referencia, ya que desea algo similar. 
+
+Link a nuestro tablero de trabajo: https://trello.com/b/QytQ1E8O/titab%C3%A9
