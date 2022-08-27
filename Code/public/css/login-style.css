@@ -1,69 +1,75 @@
-
-.contenedor{
-    width: 100%;
-    padding: 15px;
+.header-categories{
+    display: none;
 }
 
-.formulario{
+.login-form{
     font-family: 'Open Sans', sans-serif;
-    margin: auto;
-    box-sizing: border-box;
     border: solid black 1px;
-    margin: 100px 400px;
-    padding: 30px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
     background: #fff;
+    max-width: 700px;
 }
 
-.titlogin{
+.login-form .titlogin{
     text-align: center;
     font-size: 40px;
 }
 
-input[type="text"],
-input[type="password"]{
-    font-size: 15px;
-    width: 82%;
-    padding: 1px;
-    border: none;
+.login-form .contenedor{
+    width: 100%;
+    padding: 15px 0;
 }
 
-.input-contenedor{
+.contenedor .input-contenedor{
     height: 35px;
     margin-bottom: 15px;
     border: 1px solid #aaa;
     padding: 5px;
 }
 
-.icon{
-    min-width: 50px;
+.input-contenedor input{
+    width: 80%;
+    font-size: 15px;
+    padding-left: 5px;
+    border: none;
+}
+
+.input-contenedor .icon{
+    padding-left: 10px;
     text-align: center;
     color: #999
 }
 
-.button{
+.contenedor .otc{
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.login-button{
+    width: 100%;
+    text-align: center;
+}
+
+.login-button input{
     border: none;
-    width: 40%;
-    margin-left: 145px;
     color: white;
     font-size: 20px;
     background: black;
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.centrado{
+.login-form .centrado{
     text-align: center;
     font-size: 15px;
 }
 
-.otc{
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.link{
-
+.login-form .link{
     text-decoration: none;
     color: black;
     font-weight: 600;
