@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITABÉ</title>
+    <link rel="icon" type="image/x-icon" href="/images/isotype-logo-white.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/header-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
+    <link rel="stylesheet" href="css/cart-style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-social">
+            <div class="social">
+                <a href="http://api.whatsapp.com/send?phone=5493513323046"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/titabe.cba/?hl=es"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/titabe.cba"><i class="fab fa-facebook-square"></i></a>
+                <a href="mailto: titabe.cba@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="login">
+                <a href="/login"><i class="fas fa-user"></i></a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i>(0)</a>
+            </div>
+        </div>
+        <div class="header-top-navbar">
+            <div class="header-top-navbar-logo">
+                <a href="/"><img src="/images/logo-white.png" alt="logo-titabe"></a>
+            </div>
+            <div class="header-top-navbar-search-bar">
+                <form action="/busqueda">
+                    <input type="text" name="search" placeholder="Busca aquí tu producto!">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="header-top-navbar-login-cart">
+                <a href="/login"><i class="fas fa-user"></i> Iniciar sesión |</a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i> (0)</a>
+            </div>
+        </div>
+        <div class="header-bottom-navbar">
+            <div class="header-bottom-navbar-showroom">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Reservá tu visita  a nuestro showroom</p>
+            </div>
+            <div class="header-bottom-navbar-send">
+                <i class="fas fa-truck fa-lg"></i>
+                <p>Envíos a toda la Argentina</p>
+            </div>
+            <div class="header-bottom-navbar-card">
+                <i class="fas fa-credit-card fa-lg"></i>
+                <p>Aceptamos tarjetas de crédito y débito</p>
+            </div>
+        </div>
+        <div class="header-banner">
+            <img src="/images/banner-1.png" alt="banner-promotions">
+        </div>
+        <div class="header-categories">
+            <a href=""><img src="/images/cat-discos.jpg" alt="categoria-discos"></a>
+            <a href=""><img src="/images/cat-fogonero.jpg" alt="categoria-fogonero"></a>
+            <a href=""><img src="/images/cat-leñero.jpg" alt="categoria-leñero"></a>
+            <a href=""><img src="/images/cat-parrilla.jpg" alt="categoria-parrilla"></a>
+            <a href=""><img src="/images/cat-plancha.jpg" alt="categoria-plancha"></a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Carrito de compras</h2>
+        <article>
+            <img src="/images/article-leñero-40cm.png" alt="article-leñero-40">
+            <div class="cart-article-description">
+                <p class="article-name">LEÑERO 40CM</p>
+                <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
+                <form action="/cart">
+                    <input type="number" value="1">
+                </form>
+            </div>
+            <p class="cart-article-price">$6.400</p>
+            <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
+        </article>
+        <article>
+            <img src="/images/article-leñero-50cm.png" alt="article-leñero-50">
+            <div class="cart-article-description">
+                <p class="article-name">LEÑERO 50CM</p>
+                <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
+                <form action="/cart">
+                    <input type="number" value="1">
+                </form>
+            </div>
+            <p class="cart-article-price">$6.990</p>
+            <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
+        </article>
+        <div class="cart-total-price">
+            <h4>Subtotal</h3>
+            <p>$13.390</p>
+            <h4>Envío</h4>
+            <p>$1.000</p>
+            <h3>Total</h3>
+            <p class="final-price">$14.390</p>
+        </div>
+        <div class="cart-buttons">
+            <button>Ver mas productos</button>
+            <button>Finalizar compra</button>
+        </div>
+    </main>
+
+    <footer>
+        <section class="footer-about-us">
+            <h3>TITABÉ</h3>
+            <p>"Iván y Germán, hermanos creadores de la Pyme familiar TITABÉ. La misma está enfocada en la calidad de
+                los productos que ofrece y la atención personalizada, teniendo como objetivo fundamental lograr la total
+                satisfacción del cliente. A través de nuestro Slogan “La solución para el asador”, hacemos foco en
+                brindarle a nuestros clientes un producto/servicio para reunir a los más queridos a la pasión que nos
+                une, hacer comidas asadas."</p>
+        </section>
+        <section class="footer-information">
+            <h3>INFORMACIÓN</h3>
+            <ul class="footer-information-items">
+                <li>Cómo Comprar</li>
+                <li>Medios de pago</li>
+                <li>Preguntas Frecuentes</li>
+                <li>Términos y Condiciones</li>
+            </ul>
+        </section>
+        <section class="footer-fire">
+            <img src="/images/fire.jpg" alt="footer-fire">
+        </section>
+        <section class="footer-rights">
+            <p>COPYRIGHT TITABÉ - 2022. TODOS LOS DERECHOS RESERVADOS.</p>
+        </section>
+    </footer>
+</body>

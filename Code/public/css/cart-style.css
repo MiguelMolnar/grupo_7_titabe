@@ -1,0 +1,102 @@
+main{
+    padding: 10px;
+}
+
+h2{
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 35px;
+    font-family: 'Francois One', sans-serif;
+}
+
+article{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+article img{
+    width: 20%;
+}
+
+.cart-article-description{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.cart-article-description .article-name{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 15px;
+}
+
+.cart-article-description .article-description{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 10px;
+}
+
+.cart-article-price {
+    width: 20%;
+    font-size: 15px;
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+}
+
+article a{
+    width: 5%;
+    text-decoration: none;
+    color: red;
+}
+
+.cart-total-price {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-total-price h4{
+    font-family: 'Francois One', sans-serif;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.cart-total-price p {
+    font-family: 'Francois One', sans-serif;
+    width: 50%;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px 0;
+}
+
+.cart-total-price h3{
+    font-family: 'Francois One', sans-serif;
+    width: 50%;
+    font-size: 25px;
+    text-align: left;
+    border-top: 1px solid lightgray;
+    padding: 5px 0;
+}
+
+.cart-total-price .final-price{
+    font-family: 'Francois One', sans-serif;
+    width: 50%;
+    font-size: 25px;
+    text-align: right;
+    border-top: 1px solid lightgray;
+    padding: 5px 0;
+}
+
+.cart-buttons button {
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    margin-top: 10px;
+}
