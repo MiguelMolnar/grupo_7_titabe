@@ -1,0 +1,49 @@
+.header-categories{
+    display: none;
+}
+
+.form-title{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.edit-form{
+    font-family: 'Open Sans', sans-serif;
+    border: solid black 1px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    max-width: 700px;
+}
+
+.edit-form .input-contenedor{
+    height: 40px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    padding: 5px;
+}
+
+.input-contenedor input{
+    width: 100%;
+    font-size: 15px;
+    padding-left: 5px;
+    border: none;
+}
+
+.edit-form .buttons{
+    width: 100%;
+    text-align: center;
+}
+
+.edit-form button{
+    width: 45%;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

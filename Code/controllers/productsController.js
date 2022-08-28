@@ -7,6 +7,9 @@ const productsController = {
     detail: (req, res) => {
         res.render(path.join(__dirname, '../views/productDetail.ejs'))
     },
+    modify: (req, res) => {
+        res.render(path.join(__dirname, '../views/productModify.ejs'))
+    },
 }
 
 
