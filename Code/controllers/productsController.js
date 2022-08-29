@@ -1,14 +1,12 @@
-const path = require('path');
-
 const productsController = {
     cart: (req, res) => {
-        res.render(path.join(__dirname, '../views/productCart.ejs'))
+        res.render('productCart.ejs')
     },
     detail: (req, res) => {
-        res.render(path.join(__dirname, '../views/productDetail.ejs'))
+        res.render('productDetail.ejs')
     },
     modify: (req, res) => {
-        res.render(path.join(__dirname, '../views/productModify.ejs'))
+        res.render('productModify.ejs')
     },
 }
 

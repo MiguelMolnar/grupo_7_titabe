@@ -1,15 +1,12 @@
-const path = require('path');
-
-
 const indexController = {
     home: (req,res) => {
-        res.render(path.join(__dirname,'../views/index.ejs'))
+        res.render('index.ejs')
     },
     register: (req,res) => {
-        res.render(path.join(__dirname,'../views/register.ejs'))
+        res.render('register.ejs')
     },
     login: (req,res) => {
-        res.render(path.join(__dirname,'../views/login.ejs'))
+        res.render('login.ejs')
     },
 }
 
