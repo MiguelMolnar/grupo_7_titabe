@@ -1,12 +1,12 @@
 const indexController = {
     home: (req,res) => {
-        res.render('index.ejs')
+        res.render('./users/index.ejs')
     },
     register: (req,res) => {
-        res.render('register.ejs')
+        res.render('./users/register.ejs')
     },
     login: (req,res) => {
-        res.render('login.ejs')
+        res.render('./users/login.ejs')
     },
 }
 
