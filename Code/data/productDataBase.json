@@ -1,0 +1,9 @@
+[{
+    "id": 1,
+    "name": "producto1",
+    "description-short": "mini descripcion",
+    "description-long": "descripcion",
+    "price": 1,
+    "category": "categoria",
+    "image": "nombre de la imagen",
+}]
