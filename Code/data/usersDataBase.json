@@ -5,7 +5,7 @@
     "category": "categoria",
     "image": "imagen",
     "email": "@.com",
-    "password": "contraseña",
+    "password": "contraseña"
   }, {
     "id": 2,
     "first-name": "Maria",
@@ -13,7 +13,7 @@
     "category": "categoria",
     "image": "imagen",
     "email": "@.com",
-    "password": "contraseña",
+    "password": "contraseña"
   }, {
     "id": 3,
     "first-name": "Lucas",
@@ -21,5 +21,5 @@
     "category": "categoria",
     "image": "imagen",
     "email": "leonardislucas@gmail.com",
-    "password": "contraseña",
+    "password": "contraseña"
   }]

@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <%- include('../partials/head') %>
-        <link rel="stylesheet" href="../css/productDetail-style.css">
-        </head>
-    <body>
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/productDetail-style.css">
+</head>
 
-        <!-- header -->
-        <%- include('../partials/header') %>
+<body>
 
-            <main>
-                <div class="current-product">
-                    <div class="product-pictures">
-                        <img src="/images/article-leñero-40cm.png" alt="article-leñero-40cm">
-                    </div>
-                    <div class="product-details">
-                        <h2>LEÑERO 40CM</h2>
-                        <p class="product-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
-                        <p class="product-price">$6.400</p>
-                        <a href="/productCart">Agregar al carrito</a>
-                    </div>
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <main>
+            <div class="current-product">
+                <div class="product-pictures">
+                    <img src="/images/<%= product.image %>" alt="product-image">
                 </div>
-            </main>
+                <div class="product-details">
+                    <h2>
+                        <%= product.name %>
+                    </h2>
+                    <p class="product-description">
+                        <%= product.descriptionLong %>
+                    </p>
+                    <p class="product-price">
+                        $<%= product.price %>
+                    </p>
+                    <a href="/products/cart">Agregar al carrito</a>
+                </div>
+            </div>
+        </main>
 
-            <!-- footer -->
-            <%- include('../partials/footer') %>
+        <!-- footer -->
+        <%- include('../partials/footer') %>
 
-    </body>
+</body>
 
 </html>

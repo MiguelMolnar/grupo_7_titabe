@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="../css/main-style.css"> 
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <section class="article-offers">
+                <h2 class="category-name">Parrillas</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'parrillas') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.description %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            <%= product.price %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Discos</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'discos') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.description %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            <%= product.price %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Fogoneros</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'fogoneros') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.description %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            <%= product.price %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">leñeros</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'leñeros') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.description %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            <%= product.price %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+
+</body>
+
+</html>

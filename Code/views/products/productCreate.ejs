@@ -12,22 +12,22 @@
         <%- include('../partials/header') %>
 
             <main>
-                <h2 class="form-title">Editando: <%=product.name%></h2>
-                <form action="/products/<%=product.id%>?_method=PUT" method="POST" class="edit-form">
+                <h2 class="form-title">Agregar nuevos productos</h2>
+                <form action="/products/" method="POST" enctype="multipart/form-data" class="edit-form">
                     <div class="input-contenedor">
-                        <input type="text" name="product-name" value="<%=product.name%>">
+                        <input type="text" placeholder="Nombre del producto" name="product-name">
                     </div>
                     <div class="input-contenedor">
-                        <input type="text" value="<%= product.description%> " name="product-description">
+                        <input type="text" placeholder="Descripción del producto" name="product-description">
                     </div>
                     <div class="input-contenedor">
-                        <input type="file" value="<%= product.image %>" name="product-image">
+                        <input type="file" placeholder="Foto del producto" name="product-image">
                     </div>
                     <div class="input-contenedor">
-                        <input type="text" value="<%= product.category %>" name="product-category">
+                        <input type="text" placeholder="Categoría" name="product-category">
                     </div>
                     <div class="input-contenedor">
-                        <input type="number" value="<%= product.price %>" name="product-price">
+                        <input type="number" placeholder="Precio" name="product-price">
                     </div>
                     <div class="buttons">
                         <button type="submit">Enviar</button>
