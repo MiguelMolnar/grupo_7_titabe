@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="../css/cart-style.css">
+</head>
+
+    <body>
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+            <main>
+                <h2>Carrito de compras</h2>
+                <article>
+                    <img src="/images/products/P01.png" alt="article-leñero-40">
+                    <div class="cart-article-description">
+                        <p class="article-name">LEÑERO 40CM</p>
+                        <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
+                        <form action="/cart">
+                            <input type="number" value="1">
+                        </form>
+                    </div>
+                    <p class="cart-article-price">$6.400</p>
+                    <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
+                </article>
+                <article>
+                    <img src="/images/products/P02.png" alt="article-leñero-50">
+                    <div class="cart-article-description">
+                        <p class="article-name">LEÑERO 50CM</p>
+                        <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
+                        <form action="/cart">
+                            <input type="number" value="1">
+                        </form>
+                    </div>
+                    <p class="cart-article-price">$6.990</p>
+                    <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
+                </article>
+                <div class="cart-total-price">
+                    <h4>Subtotal</h3>
+                        <p>$13.390</p>
+                        <h4>Envío</h4>
+                        <p>$1.000</p>
+                        <h3>Total</h3>
+                        <p class="final-price">$14.390</p>
+                </div>
+                <div class="cart-buttons">
+                    <button>Ver mas productos</button>
+                    <button>Finalizar compra</button>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

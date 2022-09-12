@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/productModify-style.css">
+        </head>
+
+    <body>
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+            <main>
+                <h2 class="form-title">Editando: <%=product.name%></h2>
+                <form action="/products/<%=product.id%>?_method=PUT" method="POST" class="edit-form">
+                    <label for="productName">Nombre del producto</label>
+                    <div class="input-contenedor">
+                        <input type="text" name="productName" value="<%=product.name%>">
+                    </div>
+                    <label for="productName">Descripcion Breve</label>
+                    <div class="input-contenedor">
+                        <input type="text" value="<%= product.descriptionShort%> " name="productDescriptionShort">
+                    </div>
+                    <label for="productName">Descripcion Detallada</label>
+                    <div class="input-contenedor">
+                        <input type="text" value="<%= product.descriptionLong%> " name="productDescriptionLong">
+                    </div>
+                    <label for="productName">Precio</label>
+                    <div class="input-contenedor">
+                        <input type="number" value="<%= product.price %>" name="productPrice">
+                    </div>
+                    <label for="productName">Categoría</label>
+                    <div class="input-contenedor">
+                        <input type="text" value="<%= product.category %>" name="productCategory">
+                    </div>
+                    <label for="productName">Foto del producto</label>
+                    <div class="input-contenedor">
+                        <input type="file" value="<%= product.image %>" name="product-image">
+                    </div>
+                    
+                    
+                    <div class="buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borar</button>
+                    </div>
+                </form>
+            </main>
+
+            <!-- footer -->
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

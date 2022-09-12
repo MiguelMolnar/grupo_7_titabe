@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="../css/main-style.css"> 
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <main>
+            <div class="article-navigation">
+                <div class="title"><span>Categorías</span></div>
+                <ul class="categories-list">
+                    <li type="none">
+                        <a href="/products">Productos</a>
+                        <ul class="product-list">
+                            <li type="none">Leñeros/Braseros/Diablitos</li>
+                            <li type="none">Parrilas</li>
+                            <li type="none">A la cruz</li>
+                            <li type="none">Fogoneros</li>
+                            <li type="none">Asador</li>
+                            <li type="none">Discos</li>
+                            <li type="none">Accesorios</li>
+                            <li type="none">Tablas</li>
+                        </ul>
+                    </li>
+                    <li type="none">Grabados</li>
+                    <li type="none">Alquileres</li> 
+                </ul>
+            </div>
+
+            <section class="article-offers">
+                <% for (product of products) { %>
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% } %>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+
+</body>
+
+</html>

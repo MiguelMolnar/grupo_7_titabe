@@ -1,0 +1,110 @@
+[
+ {
+  "id": 1,
+  "name": "Iniciador de Fuego",
+  "descriptionShort": "No más diarios/cartón ni cenizas",
+  "descriptionLong": "Inicia el fuego en menos de 10 minutos con alcohol y aserrín (incluído)",
+  "price": 1457,
+  "category": "cat7",
+  "image": "P01.png"
+ },
+ {
+  "id": 2,
+  "name": "Pala Reforzada",
+  "descriptionShort": "Cabedora, práctica y canchera",
+  "descriptionLong": "Practicidad para cargar, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción",
+  "price": 2092,
+  "category": "cat7",
+  "image": "P02.png"
+ },
+ {
+  "id": 3,
+  "name": "Pinza Reforzada",
+  "descriptionShort": "Única con destapador de cerveza",
+  "descriptionLong": "Practicidad para manipular, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción",
+  "price": 1409,
+  "category": "cat7",
+  "image": "P03.png"
+ },
+ {
+  "id": 8,
+  "name": "Leñero / Brasero Reforzado 40cm profundidad",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 7298,
+  "category": "cat1",
+  "image": "P08.png"
+ },
+ {
+  "id": 15,
+  "name": "Cruz de Pie Reforzada",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 14408,
+  "category": "cat3",
+  "image": "P15.png"
+ },
+ {
+  "id": 21,
+  "name": "Disco con Base de Chapa Reforzada (Ø35cm)",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 10738,
+  "category": "cat6",
+  "image": "P21.png"
+ },
+ {
+  "id": 24,
+  "name": "Tabla para Cortar y Servir de Algarrobo",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 0,
+  "category": "cat8",
+  "image": "P24.png"
+ },
+ {
+  "id": 30,
+  "name": "Parrilla Reforzada (80 x 50cm)",
+  "descriptionShort": "Descripcion pendiente  ",
+  "descriptionLong": "Descripcion pendiente  ",
+  "price": 0,
+  "category": "cat2",
+  "image": "P30.png"
+ },
+ {
+  "id": 38,
+  "name": "Fogonero Cruz MUNDIAL (con todos los accesorios)",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 22014,
+  "category": "cat4",
+  "image": "P38.jpg"
+ },
+ {
+  "id": 41,
+  "name": "Asador TITABÉ",
+  "descriptionShort": "Descripcion pendiente",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 0,
+  "category": "cat5",
+  "image": "P41.jpg"
+ },
+ {
+  "id": 42,
+  "name": "GRABADO 1",
+  "descriptionShort": "Nombre, Apodo o Frase corta (hasta 15 letras)",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 0,
+  "category": "cat10",
+  "image": "P42.png"
+ },
+ {
+  "id": 48,
+  "name": "ALQUILER",
+  "descriptionShort": "Cruz de pie",
+  "descriptionLong": "Descripcion pendiente",
+  "price": 0,
+  "category": "cat9",
+  "image": "P48.png"
+ }
+]

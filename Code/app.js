@@ -14,12 +14,12 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 
 //Template engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, './src/views'));
 
 //Rutas
-const mainRouter = require('./routes/index.js');
+const mainRouter = require('./src/routes/index.js');
 app.use('/', mainRouter);
-const productsRouter = require('./routes/products.js');
+const productsRouter = require('./src/routes/products.js');
 app.use('/products', productsRouter);
 
 //Inicio de servidor

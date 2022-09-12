@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="../css/main-style.css"> 
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <section class="article-offers">
+                <h2 class="category-name">Leñeros/Braseros/Diablitos</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat1') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Parrillas</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat2') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">A la cruz</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat3') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Fogoneros</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat4') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Asador</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat5') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Discos</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat6') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Accesorios</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat7') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Tablas</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat8') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Alquileres</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat9') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+            <section class="article-offers">
+                <h2 class="category-name">Grabados</h2>
+                <% for (product of products) { %>
+                    <% if (product.category == 'cat10') { %> 
+                    <article>
+                        <p class="article-name">
+                            <%= product.name %>
+                        </p>
+                        <p class="article-description">
+                            <%= product.descriptionShort %>
+                        </p>
+                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
+                                alt="product-image" class="article-image"></a>
+                        <p class="article-price">
+                            $<%= toThousand(product.price) %>
+                        </p>
+                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
+                    </article>
+                    <% }} %>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+
+</body>
+
+</html>

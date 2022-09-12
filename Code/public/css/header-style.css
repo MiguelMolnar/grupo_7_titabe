@@ -87,7 +87,7 @@ body {
     border: none;
     padding: 6px 35px 6px 10px;
     font-size: 20px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .header-top-navbar-search-bar button {
@@ -95,7 +95,10 @@ body {
     width: 35px;
     padding: 4px;
     position: absolute;
+    border: none;
+    background-color: white;
     right: 15px;
+    border-radius: 5px;
 }
 
 .header-top-navbar-login-cart {

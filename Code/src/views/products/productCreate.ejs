@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="../css/productModify-style.css">
+        </head>
+
+    <body>
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+            <main>
+                <h2 class="form-title">Agregar nuevos productos</h2>
+                <form action="/products/" method="POST" enctype="multipart/form-data" class="edit-form">
+                    <div class="input-contenedor">
+                        <input type="text" placeholder="Nombre del producto" name="productName">
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="text" placeholder="Descripción breve del producto" name="productDescriptionShort">
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="text" placeholder="Descripción detalle del producto" name="productDescriptionLong">
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="number" placeholder="Precio" name="productPrice">
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="text" placeholder="Categoría" name="productCategory">
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="file" placeholder="Foto del producto" name="productImage">
+                    </div>
+                    
+                    
+                    <div class="buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borar</button>
+                    </div>
+                </form>
+            </main>
+
+            <!-- footer -->
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

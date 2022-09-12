@@ -59,6 +59,13 @@
     text-align: right;
 }
 
+.current-product .product-details button {
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
 @media (min-width: 769px) {
 
     .current-product{
