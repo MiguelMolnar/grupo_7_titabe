@@ -20,7 +20,7 @@ const productsController = {
 	//Formulario de creacion de un producto
     store: (req, res) => {
         let newProduct = {
-			id : products.length + 100,
+			id : products[products.length -1 ].id + 1, //cambiar para buscar el id mas grande
 			name : req.body.productName,
 			descriptionShort : req.body.productDescriptionShort,
 			descriptionLong : req.body.productDescriptionLong,

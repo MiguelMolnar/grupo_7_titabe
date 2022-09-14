@@ -1,23 +1,23 @@
 [{
     "id": 1,
-    "first-name": "Lucas",
-    "last_name": "Escobosa",
+    "firstName": "Lucas",
+    "lastName": "Escobosa",
     "category": "categoria",
     "image": "imagen",
     "email": "lucasescobosa@gmail.com",
     "password": "contraseña"
   }, {
     "id": 2,
-    "first-name": "Maria",
-    "last_name": "Roldan",
+    "firstName": "Maria",
+    "lastName": "Roldan",
     "category": "categoria",
     "image": "imagen",
     "email": "@.com",
     "password": "contraseña"
   }, {
     "id": 3,
-    "first-name": "Lucas",
-    "last_name": "Leonardis",
+    "firstName": "Lucas",
+    "lastName": "Leonardis",
     "category": "categoria",
     "image": "imagen",
     "email": "leonardislucas@gmail.com",
