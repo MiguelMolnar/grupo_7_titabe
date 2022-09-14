@@ -8,11 +8,12 @@ Empezar a hacer:
 Hacer igual:
 1) Usar el medio de comunicación que nos permite estar mas conectados.
 2) Mantener una comunicacion fluida del avance.
+3) Avisar cuando alguno tiene algun inconveniente con alguna actividad.
+4) Tener al día el tablero de trabajo.
+5) Reunirnos fuera de las clases.
   
 Hacer más:
-1) Reunirnos fuera de las clases.
-2) Comunicar cuando tenemos algun inconveniente con alguna actividad.
-3) Actualizar el tablero de trabajo.
+Momentáneamente no encontramos algo que debamos hacer más.
 
 Hacer menos:
 1) No comunicar al grupo las dificultades que estan teniendo en la cursada.
