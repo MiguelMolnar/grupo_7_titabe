@@ -21,6 +21,8 @@ const mainRouter = require('./src/routes/index.js');
 app.use('/', mainRouter);
 const productsRouter = require('./src/routes/products.js');
 app.use('/products', productsRouter);
+const usersRouter = require('./src/routes/users.js'); 
+app.use("/users", usersRouter);
 
 //Inicio de servidor
 app.listen(3000, () => console.log('Servidor corriendo'));

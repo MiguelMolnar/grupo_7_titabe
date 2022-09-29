@@ -11,34 +11,21 @@
     <!-- header -->
     <%- include('../partials/header') %>
 
-        <main>
-            <form class="register-form">
-                <h1 class="titregister">Registrate</h1>
+        <main class="register-form">
+            <h1 class="titregister">Registrate</h1>
+            <form action="/users/" method="POST" enctype="multipart/form-data">
                 <div class="contenedor">
-                    <div class="input-contenedor">
-                        <i class="fas fa-user icon"></i>
-                        <input type="text" placeholder="Nombre Completo">
-                    </div>
-                    <div class="input-contenedor">
-                        <i class="fas fa-phone-alt icon"></i>
-                        <input type="tel" placeholder="Teléfono/Celular">
-                    </div>
-                    <div class="input-contenedor">
-                        <i class="fas fa-home icon"></i>
-                        <input type="text" placeholder="Dirección">
-                    </div>
-                    <div class="input-contenedor">
-                        <i class="fas fa-envelope icon"></i>
-                        <input type="email" placeholder="Correo Electronico">
-                    </div>
-                    <div class="input-contenedor">
-                        <i class="fas fa-key icon"></i>
-                        <input type="password" placeholder="Contraseña">
-                    </div>
-                    <div class="input-contenedor">
-                        <i class="fas fa-image"></i>
-                        <input type="file" placeholder="Imagen de usuario">
-                    </div>
+                    <input type="text" name="firstName" placeholder="Nombre">
+                    <br>
+                    <input type="text" name="lastName" placeholder="Apellido">
+                    <br>
+                    <input type="text" name="category" placeholder="categoria">
+                    <br>
+                    <input type="file" name="image" placeholder="imagen">
+                    <br>
+                    <input type="email" name="email" placeholder="Correo Electronico">
+                    <br>
+                    <input type="password" name="password" placeholder="Contraseña">
                 </div>
                 <div class="register-button"><input type="submit" value="Crear Cuenta"></div>
             </form>

@@ -1,25 +1,29 @@
-[{
-    "id": 1,
-    "firstName": "Lucas",
-    "lastName": "Escobosa",
-    "category": "categoria",
-    "image": "imagen",
-    "email": "lucasescobosa@gmail.com",
-    "password": "contraseña"
-  }, {
-    "id": 2,
-    "firstName": "Maria",
-    "lastName": "Roldan",
-    "category": "categoria",
-    "image": "imagen",
-    "email": "@.com",
-    "password": "contraseña"
-  }, {
-    "id": 3,
-    "firstName": "Lucas",
-    "lastName": "Leonardis",
-    "category": "categoria",
-    "image": "imagen",
-    "email": "leonardislucas@gmail.com",
-    "password": "contraseña"
-  }]
+[
+ {
+  "id": 1,
+  "firstName": "Lucas",
+  "lastName": "Escobosa",
+  "category": "categoria",
+  "image": "imagen",
+  "email": "lucasescobosa@gmail.com",
+  "password": "contraseña"
+ },
+ {
+  "id": 2,
+  "firstName": "Maria",
+  "lastName": "Roldan",
+  "category": "categoria",
+  "image": "imagen",
+  "email": "@.com",
+  "password": "contraseña"
+ },
+ {
+  "id": 3,
+  "firstName": "Lucas",
+  "lastName": "Leonardis",
+  "category": "categoria",
+  "image": "imagen",
+  "email": "leonardislucas@gmail.com",
+  "password": "contraseña"
+ }
+]
