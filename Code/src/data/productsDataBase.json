@@ -11,8 +11,8 @@
  {
   "id": 2,
   "name": "Pala Reforzada",
-  "descriptionShort": "Cabedora, práctica y canchera",
-  "descriptionLong": "Practicidad para cargar, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción",
+  "descriptionShort": "Cabedora, práctica y canchera  ",
+  "descriptionLong": "Practicidad para cargar, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción  ",
   "price": 2092,
   "category": "cat7",
   "image": "P02.png"
@@ -21,7 +21,7 @@
   "id": 3,
   "name": "Pinza Reforzada",
   "descriptionShort": "Única con destapador de cerveza",
-  "descriptionLong": "Practicidad para manipular, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción",
+  "descriptionLong": "Practicidad para manipular, ordenar y distribuir brasas calientes generando un resultado óptimo en la cocción  ",
   "price": 1409,
   "category": "cat7",
   "image": "P03.png"

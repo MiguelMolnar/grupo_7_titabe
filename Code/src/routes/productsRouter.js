@@ -35,6 +35,5 @@ router.put('/:id', productsController.update);
 router.delete('/:id', productsController.delete);
 
 //Carro de compras
-router.get('/cart', productsController.cart);
-
+ 
 module.exports = router;
