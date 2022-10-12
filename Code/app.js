@@ -4,8 +4,8 @@ const path = require ('path');
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session'); // Para implementar session
 const cookieParser = require('cookie-parser'); //Para implementar cookie
-const recordameMiddleware = require('./middlewares/recordameMiddleware');  //Para requerir middleware
-
+const recordameMiddleware = require('./src/middlewares/recordameMiddleware');  //Para requerir middleware de recordar usuario
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 //Ejecucion de express
 const app = express();
@@ -18,10 +18,11 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(session({
     secret: 'Secreto Titabe',
     resave: false,                        //Ejecución de session
-    saveUninitialized: true,
+    saveUninitialized: false,
 }));                                   
 app.use(cookieParser());                //Ejecución de cookie
 app.use(recordameMiddleware);
+app.use(userLoggedMiddleware);
 
 //Template engine
 app.set('view engine', 'ejs');
@@ -35,11 +36,9 @@ app.use('/products', productsRouter);
 const usersRouter = require('./src/routes/usersRouter.js'); 
 app.use("/users", usersRouter);
 
-
 //Ruta no encontrada
 app.use((req, res, next) => {
     res.status(404).render('not-found');
-
     next();
 });
 

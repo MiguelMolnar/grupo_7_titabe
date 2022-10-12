@@ -12,11 +12,30 @@ const usersController = {
     },
 
     store: (req, res) => {
+        const resultValidation = validationResult(req); 
+        //Consulto si existen errores y renderizo nuevamente la vista con los mismos
+        if(resultValidation.errors.length > 0){
+            return res.render("./users/register", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }
+        if(users.find(oneUser => oneUser.email == req.body.email)){
+            return res.render("./users/register", {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            })
+        }
         let userToRegister = req.body;
-        let contrasena = userToRegister.password;
+        let pass = userToRegister.password;
         let newUser = {
+            id: users[users.length -1 ].id + 1,
             ...userToRegister,
-            password: bcrypt.hashSync(contrasena, 10),
+            password: bcrypt.hashSync(pass, 10),
             image: req.file ? req.file.filename : "default.jpg"
         }
         users.push(newUser)
@@ -35,12 +54,16 @@ const usersController = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 if (req.body.recordame != undefined) {
-                    res.cookie('recordame', req.session.userLogged.user, { maxAge: 100000 })
+                    res.cookie('recordame', req.session.userLogged.email, { maxAge: 100000 })
                 }
                 res.redirect('/');
             };
         };
     },
+    logout: (req,res) => {
+        req.session.destroy();
+        return res.redirect('/');
+    }
 }
 
 module.exports = usersController;

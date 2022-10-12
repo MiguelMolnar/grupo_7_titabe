@@ -27,43 +27,12 @@
   "password": "contraseña"
  },
  {
-  "firstName": "Maria",
-  "lastName": "Roldan",
-  "category": "Admin",
-  "email": "mariadelosangeles.rol8@gmail.com",
-  "password": "$2a$10$Brn1ogsbnY9khKVxpVg3ve8Bx7sUqQQIKFVwoQ4vLUHZf7Hq5iveq",
-  "image": "default.jpg"
- },
- {
-  "firstName": "",
-  "lastName": "",
-  "category": "",
-  "email": "",
-  "password": "$2a$10$bqDhfEoUaj82gZg.B.5X3OF3jxxpocQWJKn3dT0fstat/i3riGSqO",
-  "image": "default.jpg"
- },
- {
-  "firstName": "Maria de los A",
-  "lastName": "Roldan",
-  "category": "Admin",
-  "email": "mariadelosangeles.rol8@gmail.com",
-  "password": "$2a$10$xJ/5zH8LL1w45ukMbDxpGOWrB5W9yn5mie.1KaYqUKzMqJHCqm3YK",
-  "image": "default.jpg"
- },
- {
-  "firstName": "Maria de los A",
-  "lastName": "Roldan",
-  "category": "Admin",
-  "email": "mariadelosangeles.rol8@gmail.com",
-  "password": "$2a$10$g/DmSHnsa3SXd3uLd0b6ceHUf2T1IinJwp2SMF8km043jj.IXFBxq",
-  "image": "default.jpg"
- },
- {
-  "firstName": "Maria",
-  "lastName": "R",
-  "category": "Admin",
-  "email": "iamtheclubrocker8@gmail.com",
-  "password": "$2a$10$cKYLSnbJkWAIHynOhRNQf..5KKfWdQOS8w64SUDx9m4oVAXmbeWI.",
+  "id": 4,
+  "firstName": "lucas",
+  "lastName": "escobosa",
+  "category": "admin",
+  "email": "lucas@gmail.com",
+  "password": "$2a$10$4UO4KHnaN89NZzvzdnYh9u3TxsJsLdzI37dkVCasPEYiBZt5lUUFO",
   "image": "default.jpg"
  }
 ]

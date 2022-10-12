@@ -6,7 +6,7 @@ function recordame(req, res, next) {
         const usersFilePath = path.join(__dirname, "../src/data/usersDataBase.json");
         let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-        const userToLogin = users.find(oneUser => oneUser.user == req.cookies.recordame);
+        const userToLogin = users.find(oneUser => oneUser.email == req.cookies.recordame);
         if (userToLogin) {
             delete userToLogin.pass;
             req.session.userLogged = userToLogin;
