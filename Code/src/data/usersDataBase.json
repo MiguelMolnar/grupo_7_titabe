@@ -25,5 +25,14 @@
   "image": "imagen",
   "email": "leonardislucas@gmail.com",
   "password": "contraseña"
+ },
+ {
+  "id": 4,
+  "firstName": "lucas",
+  "lastName": "escobosa",
+  "category": "admin",
+  "email": "lucas@gmail.com",
+  "password": "$2a$10$4UO4KHnaN89NZzvzdnYh9u3TxsJsLdzI37dkVCasPEYiBZt5lUUFO",
+  "image": "default.jpg"
  }
 ]

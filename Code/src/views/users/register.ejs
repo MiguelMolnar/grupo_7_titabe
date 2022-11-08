@@ -15,17 +15,42 @@
             <h1 class="titregister">Registrate</h1>
             <form action="/users/" method="POST" enctype="multipart/form-data">
                 <div class="contenedor">
-                    <input type="text" name="firstName" placeholder="Nombre">
+                    <input type="text" name="firstName" value="<% locals.oldData ? oldData.firstName : null %>" placeholder="Nombre">
+                    <% if (locals.errors && errors.firstName) { %>
+                        <div class="text-error">
+                            <%= errors.firstName.msg %> 
+                        </div>     
+                    <% } %>
                     <br>
-                    <input type="text" name="lastName" placeholder="Apellido">
+                    <input type="text" name="lastName" placeholder="Apellido" value="<% locals.oldData ? oldData.lastName : null %>">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class="text-error">
+                            <%= errors.lastName.msg %> 
+                        </div>     
+                    <% } %>
                     <br>
-                    <input type="text" name="category" placeholder="categoria">
+                    <input type="text" name="category" placeholder="categoria" value="<% locals.oldData ? oldData.category : null %>">
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="text-error">
+                            <%= errors.category.msg %> 
+                        </div>     
+                    <% } %>
                     <br>
                     <input type="file" name="image" placeholder="imagen">
                     <br>
-                    <input type="email" name="email" placeholder="Correo Electronico">
+                    <input type="email" name="email" placeholder="Correo Electronico" value="<% locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-error">
+                            <%= errors.email.msg %> 
+                        </div>     
+                    <% } %>
                     <br>
                     <input type="password" name="password" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-error">
+                            <%= errors.password.msg %> 
+                        </div>     
+                    <% } %>
                 </div>
                 <div class="register-button"><input type="submit" value="Crear Cuenta"></div>
             </form>

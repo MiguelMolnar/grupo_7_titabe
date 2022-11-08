@@ -13,12 +13,12 @@
 
     <main class="login-form">
         <h1 class="titlogin">Login</h1>
-            <form action="/login" method="POST">
-                    <input class="sobre" type="text" name="user" placeholder="Correo electronico">
+            <form action="/users/login" method="POST">
+                    <input class="sobre" type="email" name="email" placeholder="Correo electronico">
                     <br>
-                    <input type="password" name="pass" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña">
                     <p class="otc">Recuerdame
-                    <input type="checkbox">
+                    <input type="checkbox" name="recordame">
                     </p>
                 <div class="login-button"><input type="submit" value="Iniciar Sesión" class="button"></div>
                 <p class="centrado">¿No tienes una cuenta? <a class="link" href="/users/register">Crear Cuenta</a></p>
