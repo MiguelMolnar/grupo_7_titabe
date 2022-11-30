@@ -14,9 +14,19 @@
     <main class="login-form">
         <h1 class="titlogin">Login</h1>
             <form action="/users/login" method="POST">
-                    <input class="sobre" type="email" name="email" placeholder="Correo electronico">
+                    <input class="sobre" type="email" name="email" placeholder="Correo electronico" value="<% locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-error">
+                            <%= errors.email.msg %> 
+                        </div>     
+                    <% } %>
                     <br>
                     <input type="password" name="password" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-error">
+                            <%= errors.password.msg %> 
+                        </div>     
+                    <% } %>
                     <p class="otc">Recuerdame
                     <input type="checkbox" name="recordame">
                     </p>

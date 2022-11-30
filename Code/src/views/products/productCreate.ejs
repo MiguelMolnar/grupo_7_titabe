@@ -16,21 +16,51 @@
                 <form action="/products/" method="POST" enctype="multipart/form-data" class="edit-form">
                     <div class="input-contenedor">
                         <input type="text" placeholder="Nombre del producto" name="productName">
+                        <% if (locals.errors && errors.productName) { %>
+                            <div class="text-error">
+                                <%= errors.productName.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <div class="input-contenedor">
                         <input type="text" placeholder="Descripción breve del producto" name="productDescriptionShort">
+                        <% if (locals.errors && errors.productDescriptionShort) { %>
+                            <div class="text-error">
+                                <%= errors.productDescriptionShort.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <div class="input-contenedor">
                         <input type="text" placeholder="Descripción detalle del producto" name="productDescriptionLong">
+                        <% if (locals.errors && errors.productDescriptionLong) { %>
+                            <div class="text-error">
+                                <%= errors.productDescriptionLong.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <div class="input-contenedor">
                         <input type="number" placeholder="Precio" name="productPrice">
+                        <% if (locals.errors && errors.productPrice) { %>
+                            <div class="text-error">
+                                <%= errors.productPrice.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <div class="input-contenedor">
                         <input type="text" placeholder="Categoría" name="productCategory">
+                        <% if (locals.errors && errors.productCategory) { %>
+                            <div class="text-error">
+                                <%= errors.productCategory.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <div class="input-contenedor">
                         <input type="file" placeholder="Foto del producto" name="productImage">
+                        <% if (locals.errors && errors.productImage) { %>
+                            <div class="text-error">
+                                <%= errors.productImage.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     
                     

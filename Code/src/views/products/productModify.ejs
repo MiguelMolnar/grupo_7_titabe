@@ -17,26 +17,56 @@
                     <label for="productName">Nombre del producto</label>
                     <div class="input-contenedor">
                         <input type="text" name="productName" value="<%=product.name%>">
+                        <% if (locals.errors && errors.productName) { %>
+                            <div class="text-error">
+                                <%= errors.productName.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <label for="productName">Descripcion Breve</label>
                     <div class="input-contenedor">
                         <input type="text" value="<%= product.descriptionShort%> " name="productDescriptionShort">
+                        <% if (locals.errors && errors.productDescriptionShort) { %>
+                            <div class="text-error">
+                                <%= errors.productDescriptionShort.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <label for="productName">Descripcion Detallada</label>
                     <div class="input-contenedor">
                         <input type="text" value="<%= product.descriptionLong%> " name="productDescriptionLong">
+                        <% if (locals.errors && errors.productDescriptionLong) { %>
+                            <div class="text-error">
+                                <%= errors.productDescriptionLong.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <label for="productName">Precio</label>
                     <div class="input-contenedor">
                         <input type="number" value="<%= product.price %>" name="productPrice">
+                        <% if (locals.errors && errors.productPrice) { %>
+                            <div class="text-error">
+                                <%= errors.productPrice.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <label for="productName">Categoría</label>
                     <div class="input-contenedor">
                         <input type="text" value="<%= product.category %>" name="productCategory">
+                        <% if (locals.errors && errors.productCategory) { %>
+                            <div class="text-error">
+                                <%= errors.productCategory.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     <label for="productName">Foto del producto</label>
                     <div class="input-contenedor">
                         <input type="file" value="<%= product.image %>" name="product-image">
+                        <% if (locals.errors && errors.product-image) { %>
+                            <div class="text-error">
+                                <%= errors.product-image.msg %> 
+                            </div>     
+                        <% } %>
                     </div>
                     
                     

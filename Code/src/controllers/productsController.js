@@ -1,6 +1,7 @@
 const { json } = require('express');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require("express-validator");
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -19,6 +20,14 @@ const productsController = {
     },
 	//Formulario de creacion de un producto
     store: (req, res) => {
+		const resultValidation = validationResult(req); 
+        
+        if(resultValidation.errors.length > 0){
+            return res.render('./products/productCreate', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        };
         let newProduct = {
 			id : products[products.length -1 ].id + 1, //cambiar para buscar el id mas grande
 			name : req.body.productName,
@@ -30,8 +39,9 @@ const productsController = {
 		}
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products');
-    },
+		res.redirect('/products');	
+	},
+
 
 	//Detalle de un producto
     detail: (req, res) => {
@@ -46,6 +56,14 @@ const productsController = {
     },
 	//Formulario de modificacion de producto
     update: (req, res) => {
+		const resultValidation = validationResult(req); 
+        
+        if(resultValidation.errors.length > 0){
+            return res.render('./products/productModify', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        };
         let index = products.indexOf(products.find(element => element.id == req.params.id));
 		products[index]={
 			id : products[index].id,
