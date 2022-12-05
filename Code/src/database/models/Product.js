@@ -24,7 +24,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false,
         },
         offer: {
-            type: dataTypes.BOOLEAN,
+            type: dataTypes.TINYINT(1),
             allowNull: true,
         },
         discount: {
@@ -32,11 +32,11 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: true,
         },
         stock: {
-            type: dataTypes.BOOLEAN,
-            allowNull: false,
+            type: dataTypes.TINYINT(1),
+            allowNull: true,
         },
         subcategory_id: {
-            type: dataTypes.BOOLEAN,
+            type: dataTypes.TINYINT,
             allowNull: false,
         }
     }

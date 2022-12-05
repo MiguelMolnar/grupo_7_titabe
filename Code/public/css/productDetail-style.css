@@ -1,102 +1,61 @@
-/*Francois One and Open Sans font import*/
-
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Open+Sans:ital,wght@0,400;1,300&family=Yanone+Kaffeesatz&display=swap');
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
+body {
+    background-color: #ecedee
 }
 
-.current-product{
-    width: 100%;
+.thumbnail_images ul {
+    list-style: none;
+    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px 0;
+    align-items: center;
+    margin-top: 10px
 }
 
-.current-product .product-pictures{
-    width: 100%;
-    padding: 0 20px;
+.thumbnail_images ul li {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: all 0.5s
 }
 
-.current-product .product-pictures img{
-    width: 100%;
+.thumbnail_images ul li:hover {
+    border: 2px solid #000
 }
 
-.current-product .product-details{
-    width: 100%;
-    padding: 20px;
+.main_image {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.current-product .product-details h2{
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    height: 400px;
     width: 100%;
-    font-family: 'Francois One', sans-serif;
-    font-size: 40px;
+    overflow: hidden
 }
 
-.current-product .product-details .product-description {
-    width: 100%;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 20px;
-    padding: 10px 0;
+.content p {
+    font-size: 12px
 }
 
-.current-product .product-details .product-price {
-    width: 50%;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 40px;
-    color: red;
+.right-side {
+    position: relative
 }
 
-.current-product .product-details a {
-    width: 50%;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 25px;
-    padding: 5px;
-    text-align: right;
-}
-
-.current-product .product-details button {
-    width: 100px;
+.buttons .btn {
     height: 50px;
-    padding: 5px;
-    margin-top: 20px;
+    width: 150px;
+    border-radius: 0px !important
 }
 
-@media (min-width: 769px) {
+.detail-title {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
-    .current-product{
-        width: 760px;
-        margin: auto;
-        padding: 40px 0;
-    }
+.detail-price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 
-    .current-product .product-pictures{
-        width: 50%;
-        padding: 20px;
-    }
-
-    .current-product .product-details{
-        width: 50%;
-    }
-
-    .current-product .product-details h2{
-        font-size: 50px;
-    }
-
-    .current-product .product-details .product-description {
-        font-size: 30px;
-        padding: 0;
-    }
-
-    .current-product .product-details .product-price {
-        font-size: 50px;
-    }
-
-    .current-product .product-details a {
-        font-size: 30px;
-    }
+.detail-description {
+    font-family: 'Roboto Condensed', sans-serif;
 }

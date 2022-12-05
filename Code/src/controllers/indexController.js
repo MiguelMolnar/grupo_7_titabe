@@ -1,24 +1,30 @@
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const indexController = {
     home: (req,res) => {
-        res.render('./users/index', {products:products , toThousand});
+        res.render('./users/index');
     },
-    search: (req, res) => {
-		// pendiente
+    search: async (req, res) => {
+		try {
+			const products = await db.Product.findAll({
+                where: {name: { [Op.substring] : req.query.search }},
+				include: {
+					association: 'products_images',
+                    where: { main: 1 }
+				}
+			})
+            if(!products) {
+				res.status(404).json({error: 'No encontrado'});
+				return
+			};
+			res.render('./products/products', {products, toThousand});
+		} catch(e) {
+			res.status(500).json({ error: e })
+		}	
 	},
-    register: (req,res) => {
-        res.render('./users/register');
-    },
-    login: (req,res) => {
-        res.render('./users/login');
-    },
 };
 
 module.exports = indexController;

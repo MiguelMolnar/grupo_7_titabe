@@ -2,7 +2,7 @@ module.exports = function(sequelize, dataTypes) {
     const alias = 'Cart_status';
     const cols = {
         id: {
-            type: dataTypes.BOOLEAN,
+            type: dataTypes.TINYINT,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -14,15 +14,15 @@ module.exports = function(sequelize, dataTypes) {
     }
     const config = {
         tableName: 'cart_status',
-        timestamps: true
+        timestamps: false
     }
 
     const Cart_status = sequelize.define(alias,cols,config);
 
     Cart_status.associate = function (models) {
         Cart_status.hasMany(models.Cart, {
-            as: "cart",
-            foreignKey: "cart_id"
+            as: 'cart',
+            foreignKey: 'status_id'
         })
     }
 

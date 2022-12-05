@@ -8,48 +8,184 @@
 
     <body>
 
+        <!-- icons -->
+        <%- include('../partials/icons') %>
         <!-- header -->
         <%- include('../partials/header') %>
+        <section class="h-100 text-bg-light">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                  <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                      <div class="row g-0">
+                        <div class="col-lg-8">
+                          <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                              <h1 class="fw-bold mb-0 text-black">Carrito de compras</h1>
+                              <h6 class="mb-0 text-muted">3 artículos</h6>
+                            </div>
+                            <hr class="my-4">
+          
+                            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                              <div class="col-md-2 col-lg-2 col-xl-2">
+                                <img
+                                  src="/images/products/P02.png"
+                                  class="img-fluid rounded-3" alt="product-image">
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-3">
+                                <h6 class="text-muted">Accesorios</h6>
+                                <h6 class="text-black mb-0">Pala Reforzada</h6>
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                  <i class="fas fa-minus"></i>
+                                </button>
+          
+                                <input id="form1" min="0" name="quantity" value="1" type="number"
+                                  class="form-control form-control-sm" />
+          
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                  <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                <h6 class="mb-0">$ 2.092</h6>
+                              </div>
+                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                              </div>
+                            </div>
+          
+                            <hr class="my-4">
+          
+                            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                              <div class="col-md-2 col-lg-2 col-xl-2">
+                                <img
+                                  src="/images/products/P15.png"
+                                  class="img-fluid rounded-3" alt="product-image">
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-3">
+                                <h6 class="text-muted">A la cruz</h6>
+                                <h6 class="text-black mb-0">Cruz de pie reforzada</h6>
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                  <i class="fas fa-minus"></i>
+                                </button>
+          
+                                <input id="form1" min="0" name="quantity" value="1" type="number"
+                                  class="form-control form-control-sm" />
+          
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                  <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                <h6 class="mb-0">$ 14.408</h6>
+                              </div>
+                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                              </div>
+                            </div>
+          
+                            <hr class="my-4">
+          
+                            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                              <div class="col-md-2 col-lg-2 col-xl-2">
+                                <img
+                                  src="/images/products/P21.png"
+                                  class="img-fluid rounded-3" alt="product-image">
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-3">
+                                <h6 class="text-muted">Discos</h6>
+                                <h6 class="text-black mb-0">Disco con Base de Chapa Reforzada</h6>
+                              </div>
+                              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                  <i class="fas fa-minus"></i>
+                                </button>
+          
+                                <input id="form1" min="0" name="quantity" value="1" type="number"
+                                  class="form-control form-control-sm" />
+          
+                                <button class="btn btn-link px-2"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                  <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                <h6 class="mb-0">$ 10.738</h6>
+                              </div>
+                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                              </div>
+                            </div>
+          
+                            <hr class="my-4">
+          
+                            <div class="pt-5">
+                              <h6 class="mb-0"><a href="/products" class="text-body"><i
+                                    class="fas fa-long-arrow-alt-left me-2"></i>Volver a Productos</a></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 bg-grey">
+                          <div class="p-5">
+                            <h3 class="fw-bold mb-5 mt-2 pt-1">Resumen</h3>
+                            <hr class="my-4">
+          
+                            <div class="d-flex justify-content-between mb-4">
+                              <h5 class="text-uppercase">subtotal</h5>
+                              <h5>$ 27.238</h5>
+                            </div>
+          
+                            <h5 class="text-uppercase mb-3">Envío</h5>
+          
+                            <div class="mb-4 pb-2">
+                              <select class="form-select">
+                                <option selected value="1">Retiro por tienda</option>
+                                <option value="2">Envío a domicilio</option>
+                                <option value="3">Envío por correo</option>
+                                <option value="4">Otro</option>
+                              </select>
+                            </div>
+          
+                            <h5 class="text-uppercase mb-3">medio de pago</h5>
+          
+                            <div class="mb-4 pb-2">
+                                <select class="form-select">
+                                  <option selected value="1">Transferencia</option>
+                                  <option value="2">Efectivo</option>
+                                  <option value="3">Tarjeta de crédito</option>
+                                </select>
+                              </div>
+          
+                            <hr class="my-4">
+          
+                            <div class="d-flex justify-content-between mb-5">
+                              <h5 class="text-uppercase">precio total</h5>
+                              <h5>$102.000</h5>
+                            </div>
+          
+                            <button type="button" class="btn btn-warning btn-block w-100 btn-lg">Ir al pago</button>
+          
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-            <main>
-                <h2>Carrito de compras</h2>
-                <article>
-                    <img src="/images/products/P01.png" alt="article-leñero-40">
-                    <div class="cart-article-description">
-                        <p class="article-name">LEÑERO 40CM</p>
-                        <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
-                        <form action="/cart">
-                            <input type="number" value="1">
-                        </form>
-                    </div>
-                    <p class="cart-article-price">$6.400</p>
-                    <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
-                </article>
-                <article>
-                    <img src="/images/products/P02.png" alt="article-leñero-50">
-                    <div class="cart-article-description">
-                        <p class="article-name">LEÑERO 50CM</p>
-                        <p class="article-description">27CM ANCHO X 30CM ALTO REFORZADO</p>
-                        <form action="/cart">
-                            <input type="number" value="1">
-                        </form>
-                    </div>
-                    <p class="cart-article-price">$6.990</p>
-                    <a href="/borrar"><i class="fas fa-minus-circle"></i></a>
-                </article>
-                <div class="cart-total-price">
-                    <h4>Subtotal</h3>
-                        <p>$13.390</p>
-                        <h4>Envío</h4>
-                        <p>$1.000</p>
-                        <h3>Total</h3>
-                        <p class="final-price">$14.390</p>
-                </div>
-                <div class="cart-buttons">
-                    <button>Ver mas productos</button>
-                    <button>Finalizar compra</button>
-                </div>
-            </main>
+        
 
             <!-- footer -->
             <%- include('../partials/footer') %>

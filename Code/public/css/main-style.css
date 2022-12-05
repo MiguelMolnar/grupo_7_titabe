@@ -1,7 +1,7 @@
 /*Francois One and Open Sans font import*/
 
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Open+Sans:ital,wght@0,400;1,300&family=Yanone+Kaffeesatz&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;1,100&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -12,9 +12,79 @@ main {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("/images/main-background.jpg");
+    /*background-image: url("/images/fire.jpg");*/
+    background-color: black;
     background-position: center;
     background-size: cover;
+}
+
+.index-title{
+    font-family: 'Francois One', sans-serif;
+}
+
+.index-picture{
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter, 1s;
+}
+
+.index-item:hover .index-picture{
+    filter: grayscale(0%) !important;
+    transform: scale(1.02);
+}
+
+.dropdown-toggle { outline: 0; }
+
+.btn-toggle {
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255, 0.85);
+  background-color: transparent;
+}
+
+.mb-1 .btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='white' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(255, 255, 255);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+}
+
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+
+/*other*/
+.product-title {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.product-subtitle {
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-price {
+    font-family: 'Roboto', sans-serif;
 }
 
 .article-navigation {
@@ -135,5 +205,11 @@ main {
     }
     .article-offers article{
         width: 23%;
+    }
+}
+
+@media (min-width: 992px) {
+    .categoriesCollapse{
+        display: block !important;
     }
 }

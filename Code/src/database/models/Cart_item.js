@@ -14,25 +14,18 @@ module.exports = function(sequelize, dataTypes) {
         cart_id: {
             type: dataTypes.INTEGER,
             allowNull: false,
+        },
+        quantity: {
+            type: dataTypes.TINYINT,
+            allowNull: false,
         }
     }
     const config = {
         tableName: 'cart_items',
-        timestamps: true
+        timestamps: false
     }
 
     const Cart_item = sequelize.define(alias,cols,config);
-
-    Cart_item.associate = function(models) {
-        Cart_item.belongsTo(models.Cart, {
-            as: "cart",
-            foreignKey: "cart_id"
-        })
-        Cart_item.belongsTo(models.Product, {
-            as: "products",
-            foreignKey: "product_id"
-        })
-    }
 
     return Cart_item;
 }

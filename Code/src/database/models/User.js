@@ -23,7 +23,7 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
-        adress: {
+        address: {
             type: dataTypes.STRING(200),
             allowNull: true,
         },
@@ -32,30 +32,27 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false,
         },
         role_id: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.TINYINT,
             allowNull: false,
-        }
+        },
     }
     const config = {
         tableName: 'users',
-        timestamps: true
+        timestamps: false
     }
 
     const User = sequelize.define(alias,cols,config);
 
-    User.associate = function(models){
-        User.belongsTo(models.Role,{
-            as: "roles",
-            foreignKey: "role_id"
+    User.associate = function (models) {
+        User.belongsTo(models.Role, {
+            as: 'roles',
+            foreignKey: 'role_id'
         })
         User.hasMany(models.Cart, {
             as: 'cart',
-            foreignKey: 'cart_id',
+            foreignKey: 'user_id'
         })
-
     }
-
 
     return User;
 }
-

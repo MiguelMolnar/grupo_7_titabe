@@ -2,59 +2,118 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head') %>
-        <link rel="stylesheet" href="../css/main-style.css"> 
+  <%- include('../partials/head') %>
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 
-<body>
+<body class="bg-dark">
+
+  <!-- icons -->
+  <%- include('../partials/icons') %>
 
     <!-- header -->
     <%- include('../partials/header') %>
+    <!-- banner -->
+    <%- include('../partials/banner') %>
 
-        <main>
-            <div class="article-navigation">
-                <div class="title"><span>Categorías</span></div>
-                <ul class="categories-list">
-                    <li type="none">
-                        <a href="/products">Productos</a>
-                        <ul class="product-list">
-                            <li type="none">Leñeros/Braseros/Diablitos</li>
-                            <li type="none">Parrilas</li>
-                            <li type="none">A la cruz</li>
-                            <li type="none">Fogoneros</li>
-                            <li type="none">Asador</li>
-                            <li type="none">Discos</li>
-                            <li type="none">Accesorios</li>
-                            <li type="none">Tablas</li>
-                        </ul>
-                    </li>
-                    <li type="none">Grabados</li>
-                    <li type="none">Alquileres</li> 
-                </ul>
+      <main>
+        <div class="container-fluid my-3">
+          <div class="row g-0">
+            <div class="col-md-6 index-item">
+              <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                <img src="/images/products/cat4.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/4" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">FOGONEROS</p>
+                </a>
+              </div>
             </div>
+            <div class="col-md-3 col-6 index-item">
+              <div class="ratio ratio-1x1">
+                <img src="/images/products/cat5.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/5" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">ASADORES</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 index-item">
+              <div class="ratio ratio-1x1">
+                <img src="/images/products/cat3.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/3" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">CRUCES</p>
+                </a>
+              </div>
+            </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-3 col-6 index-item">
+                <div class="ratio ratio-1x1">
+                  <img src="/images/products/cat6.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                  <a href="/products/subcategory/6" class="stretched-link">
+                    <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">DISCOS</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-3 col-6 index-item">
+                <div class="ratio ratio-1x1">
+                  <img src="/images/products/cat1.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                  <a href="/products/subcategory/1" class="stretched-link">
+                    <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">LEÑEROS</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 index-item">
+                <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                  <img src="/images/products/cat2.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                  <a href="/products/subcategory/2" class="stretched-link">
+                    <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">PARRILLAS</p>
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-6 index-item">
+              <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                <img src="/images/products/cat8.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/8" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">TABLAS</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 index-item">
+              <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                <img src="/images/products/cat7.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/7" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">ACCESORIOS</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-6 index-item">
+              <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                <img src="/images/products/cat9.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/9" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">ALQUILERES</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 index-item">
+              <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                <img src="/images/products/cat10.png" alt="fogonero" class="rounded img-fluid p-2 index-picture">
+                <a href="/products/subcategory/10" class="stretched-link">
+                  <p class="position-absolute bottom-0 start-0 p-4 text-light fs-2 index-title">GRABADOS</p>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <section class="article-offers">
-                <% for (product of products) { %>
-                    <article>
-                        <p class="article-name">
-                            <%= product.name %>
-                        </p>
-                        <p class="article-description">
-                            <%= product.descriptionShort %>
-                        </p>
-                        <a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image %>"
-                                alt="product-image" class="article-image"></a>
-                        <p class="article-price">
-                            $<%= toThousand(product.price) %>
-                        </p>
-                        <div class="article-cart"><i class="fas fa-cart-plus fa-2x"></i></div>
-                    </article>
-                    <% } %>
-            </section>
-        </main>
+        </div>
 
-        <!-- footer -->
-        <%- include('../partials/footer') %>
+
+      </main>
+
+      <!-- footer -->
+      <%- include('../partials/footer') %>
 
 </body>
 

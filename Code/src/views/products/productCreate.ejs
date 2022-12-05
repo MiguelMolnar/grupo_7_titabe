@@ -2,78 +2,170 @@
 <html lang="en">
 
     <head>
+        <!-- HTML head -->
         <%- include('../partials/head') %>
-        <link rel="stylesheet" href="../css/productModify-style.css">
-        </head>
+    </head>
 
     <body>
-
+        <!-- icons -->
+        <%- include('../partials/icons') %>
         <!-- header -->
         <%- include('../partials/header') %>
 
-            <main>
-                <h2 class="form-title">Agregar nuevos productos</h2>
-                <form action="/products/" method="POST" enctype="multipart/form-data" class="edit-form">
-                    <div class="input-contenedor">
-                        <input type="text" placeholder="Nombre del producto" name="productName">
-                        <% if (locals.errors && errors.productName) { %>
-                            <div class="text-error">
-                                <%= errors.productName.msg %> 
-                            </div>     
-                        <% } %>
+        <div class="bg-light text-dark" style="padding: 5em 0;">
+            <div class="container px-3 mx-auto">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-10 px-3">
+                        <div class="row rounded shadow bg-white">
+                            <div class="col-md-5 p-0">
+                                <img src="/images/fire.jpg" class="img-fluid w-100 h-100 rounded-start"
+                                    alt="product-image" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-7 p-4 p-md-5">
+                                <div class="d-flex justify-content-between">
+                                    <div class="w-100 text-start">
+                                        <h3 class="mb-4">Agregar nuevo item</h3>
+                                    </div>
+                                </div>
+                                <form action="/products/" method="POST" enctype="multipart/form-data" class="edit-form" id="createForm">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control <%= locals.errors && errors.productName ? 'is-invalid' : null %>" id="createInputName" placeholder="Nombre del producto" name="productName" value="<%= locals.oldData ? oldData.productName : null %>">
+                                        <label for="createInputName">Nombre del producto</label>
+                                    </div>
+                                    <% if (locals.errors && errors.productName) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productName.msg %> 
+                                        </div>     
+                                    <% } %>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control <%= locals.errors && errors.productDescriptionShort ? 'is-invalid' : null %>" id="createInputDescriptionS" placeholder="Descripción breve" name="productDescriptionShort" value="<%= locals.oldData ? oldData.productDescriptionShort : null %>">
+                                        <label for="createInputDescriptionS">Descripción breve</label>
+                                    </div>
+                                    <% if (locals.errors && errors.productDescriptionShort) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productDescriptionShort.msg %> 
+                                        </div>     
+                                    <% } %>
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control <%= locals.errors && errors.productDescriptionLong ? 'is-invalid' : null %>" placeholder="Descripción detallada" name="productDescriptionLong" id="createInputDescriptionL" style="height: 100px" value="<%= locals.oldData ? oldData.productDescriptionLong : null %>"></textarea>
+                                        <label for="createInputDescriptionL">Descripción detallada</label>
+                                    </div>
+                                    <% if (locals.errors && errors.productDescriptionLong) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productDescriptionLong.msg %> 
+                                        </div>     
+                                    <% } %>
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">$</span>
+                                                <div class="form-floating">
+                                                <input type="number" class="form-control <%= locals.errors && errors.productPrice ? 'is-invalid' : null %>" id="createInputPrice" placeholder="Precio original" name="productPrice" value="<%= locals.oldData ? oldData.productPrice : null %>">
+                                                <label for="createInputPrice">Precio original</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="input-group mb-3">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control <%= locals.errors && errors.productDiscount ? 'is-invalid' : null %>" id="createInputDiscount" placeholder="Descuento" name="productDiscount" value="<%= locals.oldData ? oldData.productDiscount : 0 %>">
+                                                    <label for="createInputDiscount">Descuento</label>
+                                                </div>
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% if (locals.errors && errors.productPrice) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productPrice.msg %> 
+                                        </div>     
+                                    <% } %>
+                                    <% if (locals.errors && errors.productDiscount) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productDiscount.msg %> 
+                                        </div>     
+                                    <% } %>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="mb-3">
+                                                <div class="form-floating">
+                                                <select class="form-select " id="floatingSelectGrid" name="productCategory">
+                                                    <option selected value="1">Productos</option>
+                                                    <option value="2">Servicios</option>
+                                                </select>
+                                                <label for="floatingSelectGrid">Categoría</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="mb-3">
+                                                <div class="form-floating">
+                                                <select class="form-select" id="floatingSelectGrid" name="productSubcategory">
+                                                    <option selected value="1">Leñeros/Braseros/Diablitos</option>
+                                                    <option value="2">Parrillas</option>
+                                                    <option value="3">A la cruz</option>
+                                                    <option value="4">Fogoneros</option>
+                                                    <option value="5">Asadores</option>
+                                                    <option value="6">Discos</option>
+                                                    <option value="7">Accesorios</option>
+                                                    <option value="8">Tablas</option>
+                                                    <option value="9">Alquileres</option>
+                                                    <option value="10">Grabados</option>
+                                                </select>
+                                                <label for="floatingSelectGrid">Subcategoría</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% if (locals.errors && errors.productCategory) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productCategory.msg %> 
+                                        </div>     
+                                    <% } %>
+                                    <% if (locals.errors && errors.productSubcategory) { %>
+                                        <div class="text-danger mb-3">
+                                            <%= errors.productSubcategory.msg %> 
+                                        </div>     
+                                    <% } %>
+
+                                    <div class="mb-4">
+                                        <label for="formFile" class="form-label fw-bold">Fotos del producto</label>
+                                        <div class="input-group mb-2 ">
+                                            <input class="form-control <%= locals.errors && errors.productImageMain ? 'is-invalid' : null %>" type="file" id="formFile" name="productImageMain">
+                                            <label class="input-group-text" for="inputGroupFile01">Portada</label>
+                                        </div>
+                                        <% if (locals.errors && errors.productImageMain) { %>
+                                            <div class="text-danger mb-3">
+                                                <%= errors.productImageMain.msg %> 
+                                            </div>     
+                                        <% } %>
+                                        <div class="input-group">
+                                            <input class="form-control" type="file" id="formFile" name="productImages" multiple>
+                                            <label class="input-group-text" for="inputGroupFile01">Otras</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check form-switch mb-4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="productStock" checked>
+                                        <label class="form-check-label fw-bold" for="flexSwitchCheckChecked">Producto en Stock</label>
+                                    </div>
+                                    <div class="text-danger"><ul id="createErrors"></ul></div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="submit" class="btn btn-warning" style="width:45%">ENVIAR</button>
+                                        <button type="reset" class="btn btn-danger" style="width:45%">BORRAR</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-contenedor">
-                        <input type="text" placeholder="Descripción breve del producto" name="productDescriptionShort">
-                        <% if (locals.errors && errors.productDescriptionShort) { %>
-                            <div class="text-error">
-                                <%= errors.productDescriptionShort.msg %> 
-                            </div>     
-                        <% } %>
-                    </div>
-                    <div class="input-contenedor">
-                        <input type="text" placeholder="Descripción detalle del producto" name="productDescriptionLong">
-                        <% if (locals.errors && errors.productDescriptionLong) { %>
-                            <div class="text-error">
-                                <%= errors.productDescriptionLong.msg %> 
-                            </div>     
-                        <% } %>
-                    </div>
-                    <div class="input-contenedor">
-                        <input type="number" placeholder="Precio" name="productPrice">
-                        <% if (locals.errors && errors.productPrice) { %>
-                            <div class="text-error">
-                                <%= errors.productPrice.msg %> 
-                            </div>     
-                        <% } %>
-                    </div>
-                    <div class="input-contenedor">
-                        <input type="text" placeholder="Categoría" name="productCategory">
-                        <% if (locals.errors && errors.productCategory) { %>
-                            <div class="text-error">
-                                <%= errors.productCategory.msg %> 
-                            </div>     
-                        <% } %>
-                    </div>
-                    <div class="input-contenedor">
-                        <input type="file" placeholder="Foto del producto" name="productImage">
-                        <% if (locals.errors && errors.productImage) { %>
-                            <div class="text-error">
-                                <%= errors.productImage.msg %> 
-                            </div>     
-                        <% } %>
-                    </div>
-                    
-                    
-                    <div class="buttons">
-                        <button type="submit">Enviar</button>
-                        <button type="reset">Borar</button>
-                    </div>
-                </form>
-            </main>
+                </div>
+            </div>
+        </div>
 
             <!-- footer -->
             <%- include('../partials/footer') %>
 
     </body>
-
+    <script src="/js/createValidation.js"></script> 
 </html>

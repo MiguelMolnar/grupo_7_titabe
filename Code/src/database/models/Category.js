@@ -2,7 +2,7 @@ module.exports = function(sequelize, dataTypes) {
     const alias = 'Category';
     const cols = {
         id: {
-            type: dataTypes.BOOLEAN,
+            type: dataTypes.TINYINT,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -14,20 +14,17 @@ module.exports = function(sequelize, dataTypes) {
     }
     const config = {
         tableName: 'categories',
-        timestamps: true
+        timestamps: false
     }
 
     const Category = sequelize.define(alias,cols,config);
-
+    
     Category.associate = function (models) {
         Category.hasMany(models.Subcategory, {
-            as: "subcategies",
-            foreignKey: "subcategory_id"
+            as: 'subcategories',
+            foreignKey: 'category_id'
         })
     }
 
-
-
     return Category;
 }
-

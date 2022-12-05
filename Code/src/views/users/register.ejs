@@ -3,62 +3,132 @@
 
 <head>
     <%- include('../partials/head') %>
-        <link rel="stylesheet" href="../css/register-style.css">
+        <!-- <link rel="stylesheet" href="../css/register-style.css">  -->
 </head>
-
 <body>
+    <!-- icons -->
+    <%- include('../partials/icons') %>
 
-    <!-- header -->
-    <%- include('../partials/header') %>
+        <!-- header -->
+        <%- include('../partials/header') %>
 
-        <main class="register-form">
-            <h1 class="titregister">Registrate</h1>
-            <form action="/users/" method="POST" enctype="multipart/form-data">
-                <div class="contenedor">
-                    <input type="text" name="firstName" value="<% locals.oldData ? oldData.firstName : null %>" placeholder="Nombre">
-                    <% if (locals.errors && errors.firstName) { %>
-                        <div class="text-error">
-                            <%= errors.firstName.msg %> 
-                        </div>     
-                    <% } %>
-                    <br>
-                    <input type="text" name="lastName" placeholder="Apellido" value="<% locals.oldData ? oldData.lastName : null %>">
-                    <% if (locals.errors && errors.lastName) { %>
-                        <div class="text-error">
-                            <%= errors.lastName.msg %> 
-                        </div>     
-                    <% } %>
-                    <br>
-                    <input type="text" name="category" placeholder="categoria" value="<% locals.oldData ? oldData.category : null %>">
-                    <% if (locals.errors && errors.category) { %>
-                        <div class="text-error">
-                            <%= errors.category.msg %> 
-                        </div>     
-                    <% } %>
-                    <br>
-                    <input type="file" name="image" placeholder="imagen">
-                    <br>
-                    <input type="email" name="email" placeholder="Correo Electronico" value="<% locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="text-error">
-                            <%= errors.email.msg %> 
-                        </div>     
-                    <% } %>
-                    <br>
-                    <input type="password" name="password" placeholder="Contraseña">
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="text-error">
-                            <%= errors.password.msg %> 
-                        </div>     
-                    <% } %>
+            <div class="bg-light text-dark" style="padding: 5em 0;">
+                <div class="container px-3 mx-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-10 px-3">
+                            <div class="row rounded shadow bg-white">
+                                <div class="col-md-5 px-0">
+                                    <img src="/images/main-background.jpg" class="img-fluid w-100 h-100 rounded-start"
+                                        alt="login-image" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-7 p-4 p-md-5">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-60 text-start">
+                                            <h3 class="mb-4">REGISTRATE</h3>
+                                        </div>
+                                        <div class="w-40 text-end ">
+                                            <a href="#" class="">
+                                                <svg class="me-1 me-sm-2" width="30px" height="30px" fill="gray">
+                                                    <use xlink:href="#facebook">
+                                                </svg></a>
+                                            <a href="#" class="">
+                                                <svg class="me-1 me-sm-2" width="30px" height="30px" fill="gray">
+                                                    <use xlink:href="#google">
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <form action="/users/register" method="POST" enctype="multipart/form-data" id="registerForm">
+                                        <div class="form-floating mt-3">
+                                            <input type="text" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %> " id="registerInputName" placeholder="Nombre Completo" name="fullName" value="<%= locals.oldData ? oldData.fullName : null %>">
+                                            <label for="registerInputName">Nombre Completo</label>
+                                        </div>
+                                        <% if (locals.errors && errors.fullName) { %>
+                                            <div class="text-danger">
+                                                <%= errors.fullName.msg %> 
+                                            </div>
+                                        <% } %>
+                                        
+                                        <div class="form-floating mt-3">
+                                            <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" id="registerInputEmail" placeholder="name@example.com" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                                            <label for="registerInputEmail">Email</label>
+                                        </div>
+                                        <% if (locals.errors && errors.email) { %>
+                                            <div class="text-danger">
+                                                <%= errors.email.msg %> 
+                                            </div>
+                                        <% } %>
+
+                                        <div class="form-floating mt-3">
+                                            <input type="tel" class="form-control <%= locals.errors && errors.phoneNumber ? 'is-invalid' : null %>" id="registerInputPhone" placeholder="3515555555" name="phoneNumber" value="<%= locals.oldData ? oldData.phoneNumber : null %>">
+                                            <label for="registerInputPhone">Teléfono/Celular</label>
+                                        </div>
+                                        <% if (locals.errors && errors.phoneNumber) { %>
+                                            <div class="text-danger">
+                                                <%= errors.phoneNumber.msg %> 
+                                            </div>
+                                        <% } %>
+
+                                        <div class="form-floating mt-3">
+                                            <input type="text" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" id="registerInputAddress" placeholder="Colon 123, Córdoba" name="address" value="<%= locals.oldData ? oldData.address : null %>">
+                                            <label for="registerInputAddress">Dirección</label>
+                                        </div>
+                                        <% if (locals.errors && errors.address) { %>
+                                            <div class="text-danger">
+                                                <%= errors.address.msg %> 
+                                            </div>
+                                        <% } %>
+
+                                        <div class="form-floating mt-3">
+                                            <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="registerInputPassword" placeholder="******" name="password">
+                                            <label for="registerInputPassword">Contraseña</label>
+                                            <div id="passwordHelpBlock" class="form-text">
+                                            8-20 caracteres, debe incluir al menos una mayúscula o número.
+                                            </div>
+                                        </div>
+                                        <% if (locals.errors && errors.password) { %>
+                                            <div class="text-danger">
+                                                <%= errors.password.msg %> 
+                                            </div>
+                                        <% } %>
+
+                                        <div class="form-floating mt-3">
+                                            <input type="password" class="form-control <%= locals.errors && errors.passwordCheck ? 'is-invalid' : null %>" id="registerInputPassword2" placeholder="******" name="passwordCheck">
+                                            <label for="registerInputPassword2">Confirmá tu contraseña</label>
+                                        </div>
+                                        <% if (locals.errors && errors.passwordCheck) { %>
+                                            <div class="text-danger">
+                                                <%= errors.passwordCheck.msg %> 
+                                            </div>
+                                        <% } %>
+
+                                        <div class="mt-4">
+                                            <label for="formFile" class="form-label">Imagen de usuario</label>
+                                            <input class="form-control" type="file" id="formFile" name="image">
+                                        </div>
+
+                                        <% if (session.userLogged && session.userLogged.role_id === 1) { %>
+                                            <div class="mt-4">
+                                                <select class="form-select" name="role">
+                                                    <option selected>Rol del usuario</option>
+                                                    <option value="1">Desarrollador</option>
+                                                    <option value="2">Administrador</option>
+                                                    <option value="3">Usuario</option>
+                                                  </select>
+                                            </div>
+                                        <% } %>
+                                        <div class="text-danger mt-3"><ul id="registerErrors"></ul></div>
+                                        <button type="submit" class="btn btn-warning w-100 mt-3">REGISTRARSE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="register-button"><input type="submit" value="Crear Cuenta"></div>
-            </form>
-        </main>
-
+            </div>
+            
         <!-- footer -->
         <%- include('../partials/footer') %>
 
 </body>
-
+<script src="/js/registerValidation.js"></script>
 </html>

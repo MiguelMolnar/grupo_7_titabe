@@ -2,7 +2,7 @@ module.exports = function(sequelize, dataTypes) {
     const alias = 'Role';
     const cols = {
         id: {
-            type: dataTypes.BOOLEAN,
+            type: dataTypes.TINYINT,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -14,18 +14,17 @@ module.exports = function(sequelize, dataTypes) {
     }
     const config = {
         tableName: 'roles',
-        timestamps: true
+        timestamps: false
     }
 
     const Role = sequelize.define(alias,cols,config);
 
     Role.associate = function (models) {
-    Role.hasMany(models.User, {
-        as: "users",
-        foreignKey: "user_id"
-    })
-}
-
+        Role.hasMany(models.User, {
+            as: 'users',
+            foreignKey: 'role_id'
+        })
+    }
 
     return Role;
 }

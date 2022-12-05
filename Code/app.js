@@ -4,24 +4,23 @@ const path = require ('path');
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session'); // Para implementar session
 const cookieParser = require('cookie-parser'); //Para implementar cookie
-const recordameMiddleware = require('./src/middlewares/recordameMiddleware');  //Para requerir middleware de recordar usuario
-const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 //Ejecucion de express
 const app = express();
 
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+
 //Middlewares
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false })); //Capturar pedidos por POST
+app.use(express.urlencoded({ extended: false })); //capturar pedidos por POST
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(session({
     secret: 'Secreto Titabe',
-    resave: false,                        //Ejecución de session
-    saveUninitialized: false,
+    resave: true,                        //Ejecución de session
+    saveUninitialized: false, //if false session object will no be stored if it isn't modified (is empty)
 }));                                   
 app.use(cookieParser());                //Ejecución de cookie
-app.use(recordameMiddleware);
 app.use(userLoggedMiddleware);
 
 //Template engine

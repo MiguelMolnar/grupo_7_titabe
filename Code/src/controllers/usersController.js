@@ -1,26 +1,30 @@
-const fs = require("fs");
-const path = require("path");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
-
-const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
-let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const db = require('../database/models');
 
 const usersController = {
     register: (req, res) => {
-        res.render("./users/register")
+        res.render("./users/register", {session : req.session})
     },
 
-    store: (req, res) => {
+    store: async (req, res) => {
+        
         const resultValidation = validationResult(req); 
+
         //Consulto si existen errores y renderizo nuevamente la vista con los mismos
         if(resultValidation.errors.length > 0){
             return res.render("./users/register", {
                 errors: resultValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                session: req.session
             })
         }
-        if(users.find(oneUser => oneUser.email == req.body.email)){
+        
+        //Chequeo que no existan usuarios con ese mail
+        const userRegistered = await db.User.findOne({
+            where: {email : req.body.email}
+        })
+        if(userRegistered){
             return res.render("./users/register", {
                 errors: {
                     email: {
@@ -30,45 +34,80 @@ const usersController = {
                 oldData: req.body
             })
         }
-        let userToRegister = req.body;
-        let pass = userToRegister.password;
-        let newUser = {
-            id: users[users.length -1 ].id + 1,
-            ...userToRegister,
-            password: bcrypt.hashSync(pass, 10),
-            image: req.file ? req.file.filename : "default.jpg"
+        
+        //Comparo que las dos contaseñas coincidan
+        if(req.body.password != req.body.passwordCheck){
+            return res.render("./users/register", {
+                errors: {
+                    password: {
+                        msg: 'Las contraseñas no coinciden'
+                    }
+                },
+                oldData: req.body
+            })
         }
-        users.push(newUser)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/users/login");
+
+        try{
+            const newUser = await db.User.create({
+                fullName: req.body.fullName,
+                email: req.body.email,
+                phoneNumber: parseInt(req.body.phoneNumber),
+                address: req.body.address,
+                password: bcrypt.hashSync(req.body.password , 10),
+                image: req.file ? req.file.filename : "default.jpg",
+                role_id: req.body.role ? req.body.role : 3
+            })
+    
+            return res.redirect("/users/login");
+
+        } catch(e) {
+			res.status(500).json({ error: e })
+		}
+
     },
 
     login: (req, res) => {
         res.render("./users/login")
     },
-    loginProcess: (req, res) => {
-        const resultValidation = validationResult(req); 
-        
-        if(resultValidation.errors.length > 0){
-            return res.render("./users/login", {
-                errors: resultValidation.mapped(),
-                oldData: req.body
+
+    loginProcess: async (req, res) => {
+        try {
+            const userToLogin = await db.User.findOne({
+                where: {email : req.body.email}
             })
-        };
-        const userToLogin = users.find(oneUser => oneUser.email == req.body.email);
-        if (userToLogin) {
-            const isPaswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password)
-            if (isPaswordCorrect) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                if (req.body.recordame != undefined) {
-                    res.cookie('recordame', req.session.userLogged.email, { maxAge: 100000 })
+            if (userToLogin) {
+                const isPaswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password)
+                if (isPaswordCorrect) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    if (req.body.remember) {
+                        res.cookie('remember', req.session.userLogged.email, { maxAge: 100000 })
+                    }
+                    return res.redirect('/');
+                };
+                return res.render("./users/login", {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                    }
+                });
+            }
+            return res.render("./users/login", {
+                errors: {
+                    email: {
+                        msg: 'No se encuentra el email registrado'
+                    }
                 }
-                res.redirect('/');
-            };
-        };
+            });
+
+        } catch(e) {
+			res.status(500).json({ error: e })
+		}
     },
+
     logout: (req,res) => {
+        res.clearCookie('remember');
         req.session.destroy();
         return res.redirect('/');
     }

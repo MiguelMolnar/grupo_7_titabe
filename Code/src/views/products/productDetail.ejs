@@ -7,36 +7,105 @@
 </head>
 
 <body>
+    <script>function changeImage(element) {
+            var main_prodcut_image = document.getElementById('main_product_image');
+            main_prodcut_image.src = element.src;
+        }
+    </script>
+    <!-- icons -->
+    <%- include('../partials/icons') %>
+        <!-- header -->
+        <%- include('../partials/header') %>
 
-    <!-- header -->
-    <%- include('../partials/header') %>
+            <main class="bg-light text-dark py-3">
+                <div class="container mt-5 mb-5">
+                    <div class="card shadow border border-0">
+                        <div class="row g-0">
+                            <div class="col-md-6 border-end">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div class="main_image"> <img src="/images/products/<%= product.products_images[0].name %>"
+                                            id="main_product_image" width="350"> </div>
+                                    <div class="thumbnail_images">
+                                        <ul id="thumbnail">
+                                            <% for( let i = 0; i < product.products_images.length; i++ ) { %>
+                                                <li>
+                                                    <img onclick="changeImage(this)" src="/images/products/<%= product.products_images[i].name %>" width="70">
+                                                </li>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 right-side">
+                                    <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a class="link-warning" href="/">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="link-warning" href="/products">Productos</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Parrillas</li>
+                                        </ol>
+                                    </nav>
+                                    <h1 class="detail-title mb-4"><%= product.name %></h1>
 
-        <main>
-            <div class="current-product">
-                <div class="product-pictures">
-                    <img src="/images/products/<%= product.image %>" alt="product-image">
+                                    <div class="d-flex aligns-items-center justify-content-start border-start border-bottom p-2">
+                                        <h1 class="detail-price text-warning">$<%= toThousand(product.price) %></h1>
+                                        <p class="ms-3 my-auto text-muted"><em>precio exclusivo via transferencia</em></p>
+                                    </div>
+                                    <div class="d-flex flex-column aligns-items-center justify-content-start border-start border-bottom p-2 my-3">
+                                        <div>
+                                            <h6><em>Comprá con tu tarjeta favorita en:</em></h6>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <select class="form-select form-select-lg mb-1" style="width: auto;">
+                                                <option selected value="6">6</option>
+                                                <option value="3">3</option>
+                                                <option value="1">1</option>
+                                              </select>
+                                            <h4 class="m-auto mx-2">Cuotas sin interés de:</h4>
+                                            <h2 class="detail-price my-auto">$<%= toThousand(product.price * 0.266) %></h2>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column aligns-items-center justify-content-start border-start border-bottom p-2 my-3">
+                                        <div>
+                                            <h6><em>Pago en efectivo (únicamente en Córdoba Capital):</em></h6>
+                                        </div>
+                                        <div>
+                                            <h2 class="detail-price">$<%= toThousand(product.price * 0.95) %></h2>
+                                        </div>
+                                    </div>
+                                    
+                                    <% let descriptionItems = product.descriptionLong.split('\n') %>
+                                    <ul class="mt-4">
+                                        <% for( let i = 0; i < descriptionItems.length; i++ ) { %>
+                                            <li type='square' class="mt-2 pr-3 content detail-description"><%= descriptionItems[i] %></li>
+                                        <% } %>
+                                    </ul>
+
+                                    <div class="buttons d-flex flex-row mt-4 gap-2"> 
+                                        <button class="btn btn-outline-dark w-50 p-2">Comprar ahora</button>
+                                        <button class="btn btn-warning w-50 p-2">Agregar al carrito</button> 
+                                    </div>
+
+                                    <% if (session.userLogged && session.userLogged.role_id !== 3) { %>
+                                        <div class="buttons d-flex flex-row mt-4 gap-2"> 
+                                            <a class="btn btn-success w-50 p-2" href="/products/<%=product.id%>/edit" role="button">Editar producto</a>
+                                            <form action="/products/<%=product.id%>?_method=DELETE" class="w-50" method="POST" style="display: inline-flex">
+                                                <button type="submit" class="btn btn-danger w-100 p-2">Eliminar producto</button>
+                                            </form>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-details">
-                    <h2>
-                        <%= product.name %>
-                    </h2>
-                    <p class="product-description">
-                        <%= product.descriptionLong %>
-                    </p>
-                    <p class="product-price">
-                        $<%= toThousand(product.price) %>
-                    </p>
-                    <a href="/products/cart">Agregar al carrito</a>
-                    <a href="/products/<%=product.id%>/edit" class="action-button edit"><button>EDITAR PRODUCTO</button></a>
-                    <form action="/products/<%=product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                    </form>
-                </div>
-            </div>
-        </main>
 
-        <!-- footer -->
-        <%- include('../partials/footer') %>
+
+
+            </main>
+
+            <!-- footer -->
+            <%- include('../partials/footer') %>
 
 </body>
 
