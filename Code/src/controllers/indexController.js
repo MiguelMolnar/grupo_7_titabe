@@ -20,7 +20,7 @@ const indexController = {
 				res.status(404).json({error: 'No encontrado'});
 				return
 			};
-			res.render('./products/products', {products, toThousand});
+			res.render('./products/products', {products, toThousand, session: req.session});
 		} catch(e) {
 			res.status(500).json({ error: e })
 		}	

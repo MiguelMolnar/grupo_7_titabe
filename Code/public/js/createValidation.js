@@ -65,4 +65,19 @@ window.addEventListener('load', function () {
     }
 
     )
+
+    createSelectCategory.addEventListener('change', () => {
+        setSubcategoriesOptions(createSelectCategory.value)
+    })
+
+    function setSubcategoriesOptions(value) {
+        if(parseInt(value)===1){
+            createSelectSubcategory.innerHTML = 
+            '<option selected value="1">Leñeros/Braseros/Diablitos</option><option value="2">Parrillas</option><option value="3">A la cruz</option><option value="4">Fogoneros</option><option value="5">Asadores</option><option value="6">Discos</option><option value="7">Accesorios</option><option value="8">Tablas</option>'
+        }
+        else if(parseInt(value)===2){
+            createSelectSubcategory.innerHTML = 
+            '<option selected value="9">Alquileres</option><option value="10">Grabados</option>'
+        }
+    }
 })

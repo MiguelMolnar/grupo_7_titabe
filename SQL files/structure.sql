@@ -105,7 +105,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `products_images`;
 CREATE TABLE `products_images` (
-  `id` INT UNSIGNED NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED  NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `main` TINYINT(1) UNSIGNED NOT NULL,
   `product_id` INT UNSIGNED NOT NULL,
@@ -134,7 +134,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart` (
-  `id` INT UNSIGNED NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
   `date` DATE NOT NULL,
   `quantity` TINYINT UNSIGNED NOT NULL,
@@ -160,7 +160,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `cart_items`;
 CREATE TABLE `cart_items` (
-  `id` INT UNSIGNED NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `product_id` INT UNSIGNED NOT NULL,
   `cart_id` INT UNSIGNED NOT NULL,
   `quantity` TINYINT UNSIGNED NOT NULL,
