@@ -21,7 +21,7 @@ router.get('/subcategory/:id', productsController.indexSubcategory)
 router.get('/detail/:id', productsController.detail);
 
 //Formulario de creación de productos 
-router.get('/create', productsController.create);
+router.get('/create', authMiddleware, productsController.create);
 router.post('/', productsMulterMiddleware.fields([{name: 'productImageMain', maxCount: 1} , {name: 'productImages' , maxCount: 3}]), validationsProductsCreate, productsController.store);
 
 //Edicion de producto

@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
     })
 
     createInputDescriptionL.addEventListener('blur', function () {
-        (createInputDescriptionL.value == '' || createInputDescriptionL.value.length < 20) ? createInputDescriptionL.classList.add('is-invalid') : createInputDescriptionS.classList.remove('is-invalid')
+        (createInputDescriptionL.value == '' || createInputDescriptionL.value.length < 20) ? createInputDescriptionL.classList.add('is-invalid') : createInputDescriptionL.classList.remove('is-invalid')
     })
 
     createInputPrice.addEventListener('blur', function () {
