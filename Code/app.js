@@ -34,6 +34,8 @@ const productsRouter = require('./src/routes/productsRouter.js');
 app.use('/products', productsRouter);
 const usersRouter = require('./src/routes/usersRouter.js'); 
 app.use("/users", usersRouter);
+const apiRouter = require('./src/routes/apiRouter.js'); 
+app.use("/api", apiRouter);
 
 //Ruta no encontrada
 app.use((req, res, next) => {
